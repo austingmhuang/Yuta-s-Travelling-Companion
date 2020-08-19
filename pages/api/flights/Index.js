@@ -16,8 +16,7 @@ const fetchPlacesData = async () => {
           "content-type": "application/json",
           "x-rapidapi-host":
             "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-          "x-rapidapi-key":
-            "f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75",
+          "x-rapidapi-key": `${process.env.REACT_APP_PlacesDataKey}`,
           useQueryString: true
         },
         params: {
@@ -45,8 +44,7 @@ const fetchRoutesAndQuotesData = async () => {
           "content-type": "application/json",
           "x-rapidapi-host":
             "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-          "x-rapidapi-key":
-            "f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75",
+          "x-rapidapi-key": `${process.env.REACT_APP_RoutesDataKey}`,
           useQueryString: true
         }
       }
