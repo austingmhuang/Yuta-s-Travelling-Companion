@@ -1,0 +1,50 @@
+{
+  "name": "travelling-rapid-api",
+  "version": "0.1.0",
+  "private": "true",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.2",
+    "isomorphic-unfetch": "^3.0.0",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.28",
+    "morgan": "^1.9.0",
+    "next": "9.5.2",
+    "next-auth": "^3.1.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "swr": "^0.3.0",
+    "unfetch": "^4.1.0",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^4.2.3",
+    "nodemon": "^2.0.4",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^1.5.0"
+  }
+}
