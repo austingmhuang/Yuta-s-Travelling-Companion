@@ -31,8 +31,6 @@ export const fetchPlacesData = async () => {
   }
 };
 
-fetchPlacesData();
-
 export const fetchRoutesAndQuotesData = async () => {
   try {
     const {
@@ -57,5 +55,3 @@ export const fetchRoutesAndQuotesData = async () => {
     console.log(err);
   }
 };
-
-fetchRoutesAndQuotesData();

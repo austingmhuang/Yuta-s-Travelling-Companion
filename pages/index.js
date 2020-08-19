@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Index from "./api/flights/Index";
+import Flights from "./api/flights/Flights";
 
 export default function Home() {
   return (
