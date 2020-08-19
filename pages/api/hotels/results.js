@@ -20,6 +20,6 @@ export default async (req, res) => {
     });
   }
 
-  // relevant properties on the following object: thumbnailUrl, starRating, address, ratePlan.price.current
+  // relevant properties on the following object: name, thumbnailUrl, starRating, address, ratePlan.price.current, maybe also location for weather
   return res.json({ properties });
 };
