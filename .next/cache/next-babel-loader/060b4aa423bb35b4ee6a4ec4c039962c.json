@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export default async function (req, res) {\n  console.log(req.body);\n}",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/users.ts"
+    ],
+    "names": ["req", "res", "console", "log", "body"],
+    "mappings": "AAEA,eAAe,gBAAeA,GAAf,EAAoCC,GAApC,EAA0D;AACrEC,EAAAA,OAAO,CAACC,GAAR,CAAYH,GAAG,CAACI,IAAhB;AACH",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from \"next\";\n\nexport default async function(req: NextApiRequest, res: NextApiResponse) {\n    console.log(req.body)\n}"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

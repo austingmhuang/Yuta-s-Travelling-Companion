@@ -5,7 +5,7 @@ const originPlace = "NRT-sky";
 const destinationPlace = "OSAA-sky";
 const outboundpartialdate = "2020-09-01";
 
-const fetchPlacesData = async () => {
+export const fetchPlacesData = async () => {
   try {
     const {
       data: { Places }
@@ -33,7 +33,7 @@ const fetchPlacesData = async () => {
 
 fetchPlacesData();
 
-const fetchRoutesAndQuotesData = async () => {
+export const fetchRoutesAndQuotesData = async () => {
   try {
     const {
       data: { Quotes, Places, Carriers }

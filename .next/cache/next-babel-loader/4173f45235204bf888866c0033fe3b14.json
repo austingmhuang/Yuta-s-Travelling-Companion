@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "export default function getAllUsers(req, res) {\n  res.json({\n    hello: \"world\",\n    method: req.method\n  });\n}",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/users.ts"
+    ],
+    "names": ["getAllUsers", "req", "res", "json", "hello", "method"],
+    "mappings": "AAEA,eAAe,SAASA,WAAT,CAAqBC,GAArB,EAA0CC,GAA1C,EAAgE;AAC3EA,EAAAA,GAAG,CAACC,IAAJ,CAAS;AAACC,IAAAA,KAAK,EAAE,OAAR;AAAiBC,IAAAA,MAAM,EAAEJ,GAAG,CAACI;AAA7B,GAAT;AACH",
+    "sourcesContent": [
+      "import { NextApiRequest, NextApiResponse } from \"next\";\n\nexport default function getAllUsers(req: NextApiRequest, res: NextApiResponse) {\n    res.json({hello: \"world\", method: req.method})\n}"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
