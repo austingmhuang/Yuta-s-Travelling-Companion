@@ -25,6 +25,8 @@ const fetchPlacesData = async () => {
         }
       }
     );
+
+    console.log(Places);
   } catch (err) {
     console.error(err);
   }
@@ -32,9 +34,11 @@ const fetchPlacesData = async () => {
 
 fetchPlacesData();
 
-const fetchRoutesData = async () => {
+const fetchRoutesAndQuotesData = async () => {
   try {
-    const { data } = await axios.get(
+    const {
+      data: { Quotes, Places, Carriers }
+    } = await axios.get(
       `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destinationPlace}/${outboundpartialdate}`,
       {
         headers: {
@@ -42,16 +46,18 @@ const fetchRoutesData = async () => {
           "x-rapidapi-host":
             "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
           "x-rapidapi-key":
-            "c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53",
+            "f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75",
           useQueryString: true
         }
       }
     );
 
-    console.log(data);
+    console.log(Quotes);
+    console.log(Places);
+    console.log(Carriers);
   } catch (err) {
     console.log(err);
   }
 };
 
-fetchRoutesData();
+fetchRoutesAndQuotesData();

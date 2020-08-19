@@ -1,0 +1,39 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\n\nrequire(\"dotenv\");\n\nconst country = \"Japan\";\nconst originPlace = \"NRT-sky\";\nconst destinationPlace = \"OSAA-sky\";\nconst outboundpartialdate = \"2020-09-01\";\n\nconst fetchPlacesData = async () => {\n  try {\n    const {\n      data: {\n        Places\n      }\n    } = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": `${PlacesDataKey}`,\n        useQueryString: true\n      },\n      params: {\n        query: `${country}`\n      }\n    });\n  } catch (err) {\n    console.error(err);\n  }\n};\n\nfetchPlacesData();\n\nconst fetchRoutesData = async () => {\n  try {\n    const {\n      data\n    } = await axios.get(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destinationPlace}/${outboundpartialdate}`, {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": `${RoutesData}`,\n        useQueryString: true\n      }\n    });\n    console.log(data);\n  } catch (err) {\n    console.log(err);\n  }\n};\n\nfetchRoutesData();",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "country",
+      "originPlace",
+      "destinationPlace",
+      "outboundpartialdate",
+      "fetchPlacesData",
+      "data",
+      "Places",
+      "get",
+      "headers",
+      "PlacesDataKey",
+      "useQueryString",
+      "params",
+      "query",
+      "err",
+      "console",
+      "error",
+      "fetchRoutesData",
+      "RoutesData",
+      "log"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AACAC,OAAO,CAAC,QAAD,CAAP;;AAGA,MAAMC,OAAO,GAAG,OAAhB;AACA,MAAMC,WAAW,GAAG,SAApB;AACA,MAAMC,gBAAgB,GAAG,UAAzB;AACA,MAAMC,mBAAmB,GAAG,YAA5B;;AAEA,MAAMC,eAAe,GAAG,YAAY;AAClC,MAAI;AACF,UAAM;AACJC,MAAAA,IAAI,EAAE;AAAEC,QAAAA;AAAF;AADF,QAEF,MAAMR,KAAK,CAACS,GAAN,CACR,0GADQ,EAER;AACEC,MAAAA,OAAO,EAAE;AACP,wBAAgB,kBADT;AAEP,2BACE,uDAHK;AAIP,0BAAmB,GAAEC,aAAc,EAJ5B;AAKPC,QAAAA,cAAc,EAAE;AALT,OADX;AAQEC,MAAAA,MAAM,EAAE;AACNC,QAAAA,KAAK,EAAG,GAAEZ,OAAQ;AADZ;AARV,KAFQ,CAFV;AAiBD,GAlBD,CAkBE,OAAOa,GAAP,EAAY;AACZC,IAAAA,OAAO,CAACC,KAAR,CAAcF,GAAd;AACD;AACF,CAtBD;;AAwBAT,eAAe;;AAEf,MAAMY,eAAe,GAAG,YAAY;AAClC,MAAI;AACF,UAAM;AAAEX,MAAAA;AAAF,QAAW,MAAMP,KAAK,CAACS,GAAN,CACpB,4GAA2GN,WAAY,IAAGC,gBAAiB,IAAGC,mBAAoB,EAD9I,EAErB;AACEK,MAAAA,OAAO,EAAE;AACP,wBAAgB,kBADT;AAEP,2BACE,uDAHK;AAIP,0BAAmB,GAAES,UAAW,EAJzB;AAKPP,QAAAA,cAAc,EAAE;AALT;AADX,KAFqB,CAAvB;AAaAI,IAAAA,OAAO,CAACI,GAAR,CAAYb,IAAZ;AACD,GAfD,CAeE,OAAOQ,GAAP,EAAY;AACZC,IAAAA,OAAO,CAACI,GAAR,CAAYL,GAAZ;AACD;AACF,CAnBD;;AAqBAG,eAAe",
+    "sourcesContent": [
+      "import axios from \"axios\";\nrequire(\"dotenv\")\n\n\nconst country = \"Japan\";\nconst originPlace = \"NRT-sky\";\nconst destinationPlace = \"OSAA-sky\";\nconst outboundpartialdate = \"2020-09-01\";\n\nconst fetchPlacesData = async () => {\n  try {\n    const {\n      data: { Places }\n    } = await axios.get(\n      \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n      {\n        headers: {\n          \"content-type\": \"application/json\",\n          \"x-rapidapi-host\":\n            \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n          \"x-rapidapi-key\": `${PlacesDataKey}`,\n          useQueryString: true\n        },\n        params: {\n          query: `${country}`\n        }\n      }\n    );\n  } catch (err) {\n    console.error(err);\n  }\n};\n\nfetchPlacesData();\n\nconst fetchRoutesData = async () => {\n  try {\n    const { data } = await axios.get(\n      `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destinationPlace}/${outboundpartialdate}`,\n      {\n        headers: {\n          \"content-type\": \"application/json\",\n          \"x-rapidapi-host\":\n            \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n          \"x-rapidapi-key\": `${RoutesData}`,\n          useQueryString: true\n        }\n      }\n    );\n\n    console.log(data);\n  } catch (err) {\n    console.log(err);\n  }\n};\n\nfetchRoutesData();\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

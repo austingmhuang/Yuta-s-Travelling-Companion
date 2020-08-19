@@ -1,0 +1,37 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nconst country = \"Japan\";\nconst originPlace = \"NRT-sky\";\nconst destinationPlace = \"OSAA-sky\";\nconst outboundpartialdate = \"2020-09-01\";\n\nconst fetchPlacesData = async () => {\n  try {\n    const {\n      data: {\n        Places\n      }\n    } = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n        useQueryString: true\n      },\n      params: {\n        query: `${country}`\n      }\n    });\n    console.log(Places);\n  } catch (err) {\n    console.error(err);\n  }\n};\n\nfetchPlacesData();\n\nconst fetchRoutesData = async () => {\n  try {\n    const {\n      data\n    } = await axios.get(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destinationPlace}/${outboundpartialdate}`, {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n        useQueryString: true\n      }\n    });\n    console.log(data);\n  } catch (err) {\n    console.log(err);\n  }\n};\n\nfetchRoutesData();\n\nconst fetchQuotesData = async () => {\n  try {\n    const {\n      data\n    } = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2020-09-01\", {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n        useQueryString: true\n      }\n    });\n    console.log(data);\n  } catch (err) {\n    console.log(err);\n  }\n};\n\nfetchQuotesData();",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "originPlace",
+      "destinationPlace",
+      "outboundpartialdate",
+      "fetchPlacesData",
+      "data",
+      "Places",
+      "get",
+      "headers",
+      "useQueryString",
+      "params",
+      "query",
+      "console",
+      "log",
+      "err",
+      "error",
+      "fetchRoutesData",
+      "fetchQuotesData"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAIA,MAAMC,OAAO,GAAG,OAAhB;AACA,MAAMC,WAAW,GAAG,SAApB;AACA,MAAMC,gBAAgB,GAAG,UAAzB;AACA,MAAMC,mBAAmB,GAAG,YAA5B;;AAEA,MAAMC,eAAe,GAAG,YAAY;AAChC,MAAI;AACA,UAAM;AAACC,MAAAA,IAAI,EAAE;AAAEC,QAAAA;AAAF;AAAP,QAAqB,MAAMP,KAAK,CAACQ,GAAN,CAAU,0GAAV,EAC7B;AACIC,MAAAA,OAAO,EAAE;AACL,wBAAgB,kBADX;AAEL,2BAAmB,uDAFd;AAGL,0BAAkB,oDAHb;AAILC,QAAAA,cAAc,EAAE;AAJX,OADb;AAOIC,MAAAA,MAAM,EAAE;AACJC,QAAAA,KAAK,EAAG,GAAEX,OAAQ;AADd;AAPZ,KAD6B,CAAjC;AAcAY,IAAAA,OAAO,CAACC,GAAR,CAAYP,MAAZ;AACH,GAhBD,CAgBE,OAAOQ,GAAP,EAAY;AACVF,IAAAA,OAAO,CAACG,KAAR,CAAcD,GAAd;AACH;AACJ,CApBD;;AAsBAV,eAAe;;AAEf,MAAMY,eAAe,GAAG,YAAY;AAChC,MAAI;AACA,UAAM;AAAEX,MAAAA;AAAF,QAAW,MAAMN,KAAK,CAACQ,GAAN,CAAW,4GAA2GN,WAAY,IAAGC,gBAAiB,IAAGC,mBAAoB,EAA7K,EACnB;AACIK,MAAAA,OAAO,EAAE;AACL,wBAAgB,kBADX;AAEL,2BAAmB,uDAFd;AAGL,0BAAkB,oDAHb;AAILC,QAAAA,cAAc,EAAE;AAJX;AADb,KADmB,CAAvB;AAWAG,IAAAA,OAAO,CAACC,GAAR,CAAYR,IAAZ;AACH,GAbD,CAaE,OAAOS,GAAP,EAAY;AACVF,IAAAA,OAAO,CAACC,GAAR,CAAYC,GAAZ;AACH;AACJ,CAjBD;;AAmBAE,eAAe;;AAGf,MAAMC,eAAe,GAAG,YAAY;AAChC,MAAI;AACA,UAAM;AAACZ,MAAAA;AAAD,QAAS,MAAMN,KAAK,CAACQ,GAAN,CAAU,qIAAV,EACrB;AACIC,MAAAA,OAAO,EAAE;AACT,wBAAe,kBADN;AAET,2BAAkB,uDAFT;AAGT,0BAAiB,oDAHR;AAITC,QAAAA,cAAc,EAAC;AAJN;AADb,KADqB,CAArB;AASIG,IAAAA,OAAO,CAACC,GAAR,CAAYR,IAAZ;AACP,GAXD,CAWE,OAAOS,GAAP,EAAY;AACVF,IAAAA,OAAO,CAACC,GAAR,CAAYC,GAAZ;AACH;AACJ,CAfD;;AAiBAG,eAAe",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\n\n\nconst country = \"Japan\";\nconst originPlace = \"NRT-sky\";\nconst destinationPlace = \"OSAA-sky\";\nconst outboundpartialdate = \"2020-09-01\";\n\nconst fetchPlacesData = async () => {\n    try {\n        const {data: { Places }} = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n            {\n                headers: {\n                    \"content-type\": \"application/json\",\n                    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n                    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n                    useQueryString: true\n                },\n                params: {\n                    query: `${country}`\n                }\n            }\n        );\n\n        console.log(Places);\n    } catch (err) {\n        console.error(err);\n    }\n};\n\nfetchPlacesData();\n\nconst fetchRoutesData = async () => {\n    try {\n        const { data } = await axios.get(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${originPlace}/${destinationPlace}/${outboundpartialdate}`,\n            {\n                headers: {\n                    \"content-type\": \"application/json\",\n                    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n                    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n                    useQueryString: true\n                }\n            }\n        );\n\n        console.log(data);\n    } catch (err) {\n        console.log(err);\n    }\n};\n\nfetchRoutesData();\n\n\nconst fetchQuotesData = async () => {\n    try {\n        const {data} = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2020-09-01\", \n        {\n            headers: {\n            \"content-type\":\"application/json\",\n            \"x-rapidapi-host\":\"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n            \"x-rapidapi-key\":\"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n            useQueryString:true\n            }});\n\n            console.log(data);\n    } catch (err) {\n        console.log(err);\n    }\n};\n\nfetchQuotesData();"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
