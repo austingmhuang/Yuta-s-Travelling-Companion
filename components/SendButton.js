@@ -11,7 +11,8 @@ const useStyles = makeStyles(() =>
       "&:hover": {
         backgroundColor: "#FFB549",
         color: "#fff"
-      }
+      },
+      textAlign: "center"
     }
   })
 );
@@ -22,7 +23,7 @@ const SendButton = props => {
     <Button
       className={classes.button}
       variant="outlined"
-      onClick={() => props.select(props.content, props.nextId)}
+      onClick={() => props.func(props.view)}
     >
       {props.text}
     </Button>

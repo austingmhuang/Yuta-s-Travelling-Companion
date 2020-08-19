@@ -1,14 +1,11 @@
 import styles from "../styles/TextAndInputField.module.css";
+import Text from "./Text";
 
 const TextAndInputField = props => {
   return (
     <div>
       <p className={styles.text}>{props.text}</p>
-      <input
-        className={styles.input}
-        type="text"
-        placeholder={props.placeholder}
-      />
+      <Text placeholder={props.placeholder} />
     </div>
   );
 };

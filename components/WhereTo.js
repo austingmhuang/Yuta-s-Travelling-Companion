@@ -5,20 +5,11 @@ const WhereTo = () => {
   return (
     <div className={styles.inlineBox}>
       <TextAndInputField
-        id={styles.box1}
         text="Leaving from"
         placeholder="introduce your destination"
       />
-      <TextAndInputField
-        id={styles.box2}
-        text="Flying to"
-        placeholder="introduce your origin"
-      />
-      <TextAndInputField
-        id={styles.box3}
-        text="Date"
-        placeholder="introduce your time"
-      />
+      <TextAndInputField text="Flying to" placeholder="introduce your origin" />
+      <TextAndInputField text="Date" placeholder="introduce your time" />
     </div>
   );
 };
