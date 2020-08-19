@@ -1,0 +1,29 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js\";\nimport React from \"react\";\nvar __jsx = React.createElement;\nimport Fetch from \"isomorphic-unfetch\";\n\nconst Index = props => __jsx(\"div\", {\n  __self: this,\n  __source: {\n    fileName: _jsxFileName,\n    lineNumber: 4,\n    columnNumber: 5\n  }\n}, props.x);\n\nIndex.getInitialProps = async function () {\n  const res = await fetch(\"https://api.coindesk.com/v1/bpi/currentprice.json\");\n  const data = await res.json();\n  console.log(data);\n  return {\n    x: data\n  };\n};\n\nexport default Index;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "Fetch",
+      "Index",
+      "props",
+      "x",
+      "getInitialProps",
+      "res",
+      "fetch",
+      "data",
+      "json",
+      "console",
+      "log"
+    ],
+    "mappings": ";;;AAAA,OAAOA,KAAP,MAAkB,oBAAlB;;AAEA,MAAMC,KAAK,GAAIC,KAAD,IACV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GACKA,KAAK,CAACC,CADX,CADJ;;AAOAF,KAAK,CAACG,eAAN,GAAwB,kBAAkB;AACtC,QAAMC,GAAG,GAAG,MAAMC,KAAK,CAAC,mDAAD,CAAvB;AACA,QAAMC,IAAI,GAAG,MAAMF,GAAG,CAACG,IAAJ,EAAnB;AACAC,EAAAA,OAAO,CAACC,GAAR,CAAYH,IAAZ;AACA,SAAO;AACHJ,IAAAA,CAAC,EAAEI;AADA,GAAP;AAGH,CAPD;;AASA,eAAeN,KAAf",
+    "sourcesContent": [
+      "import Fetch from \"isomorphic-unfetch\";\n\nconst Index = (props) => (\n    <div>\n        {props.x}\n    </div>\n\n);\n\nIndex.getInitialProps = async function () {\n    const res = await fetch(\"https://api.coindesk.com/v1/bpi/currentprice.json\");\n    const data = await res.json();\n    console.log(data);\n    return {\n        x: data\n    }\n}\n\nexport default Index;"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

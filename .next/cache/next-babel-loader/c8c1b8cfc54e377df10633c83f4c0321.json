@@ -1,0 +1,31 @@
+{
+  "ast": null,
+  "code": "import _regeneratorRuntime from \"@babel/runtime/regenerator\";\nimport _asyncToGenerator from \"@babel/runtime/helpers/esm/asyncToGenerator\";\nimport axios from \"axios\";\nvar country = \"Japan\";\n\nvar fetchLocationData = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {\n    var _yield$axios$get, places;\n\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.prev = 0;\n            _context.next = 3;\n            return axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n              headers: {\n                \"content-type\": \"application/json\",\n                \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n                \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n                useQueryString: true\n              },\n              params: {\n                query: \"\".concat(country)\n              }\n            });\n\n          case 3:\n            _yield$axios$get = _context.sent;\n            places = _yield$axios$get.data;\n            console.log(data);\n            _context.next = 11;\n            break;\n\n          case 8:\n            _context.prev = 8;\n            _context.t0 = _context[\"catch\"](0);\n            console.error(_context.t0);\n\n          case 11:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee, null, [[0, 8]]);\n  }));\n\n  return function fetchLocationData() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\nfetchLocationData();",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "fetchLocationData",
+      "get",
+      "headers",
+      "useQueryString",
+      "params",
+      "query",
+      "places",
+      "data",
+      "console",
+      "log",
+      "error"
+    ],
+    "mappings": ";;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,IAAMC,OAAO,GAAG,OAAhB;;AAEA,IAAMC,iBAAiB;AAAA,sEAAG;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,mBAEaF,KAAK,CAACG,GAAN,CAAU,0GAAV,EAAsH;AACjJC,cAAAA,OAAO,EAAE;AACL,gCAAgB,kBADX;AAEL,mCAAmB,uDAFd;AAGL,kCAAkB,oDAHb;AAILC,gBAAAA,cAAc,EAAE;AAJX,eADwI;AAOjJC,cAAAA,MAAM,EAAE;AACJC,gBAAAA,KAAK,YAAKN,OAAL;AADD;AAPyI,aAAtH,CAFb;;AAAA;AAAA;AAEJO,YAAAA,MAFI,oBAEVC,IAFU;AAclBC,YAAAA,OAAO,CAACC,GAAR,CAAYF,IAAZ;AAdkB;AAAA;;AAAA;AAAA;AAAA;AAkBlBC,YAAAA,OAAO,CAACE,KAAR;;AAlBkB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAAjBV,iBAAiB;AAAA;AAAA;AAAA,GAAvB;;AAsBAA,iBAAiB",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Japan\"\n\nconst fetchLocationData = async () => {\n    try {\n        const { data: places } = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n            headers: {\n                \"content-type\": \"application/json\",\n                \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n                \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n                useQueryString: true,\n            },\n            params: {\n                query: `${country}`,\n            },\n        })\n\n        console.log(data);\n\n\n    } catch (err) {\n        console.error(err);\n    }\n}\n\nfetchLocationData();"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

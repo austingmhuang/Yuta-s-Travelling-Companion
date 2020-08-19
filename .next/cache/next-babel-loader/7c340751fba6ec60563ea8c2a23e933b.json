@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\naxios().then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": ["axios", "then", "response", "console", "log", "catch", "error"],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEAA,KAAK,GACAC,IADL,CACWC,QAAD,IAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAHL,EAIKG,KAJL,CAIYC,KAAD,IAAW;AACdH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

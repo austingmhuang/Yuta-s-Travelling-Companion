@@ -1,0 +1,26 @@
+{
+  "ast": null,
+  "code": "const axios = require(\"axios\");\n\naxios({\n  \"method\": \"GET\",\n  \"url\": \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-09-01\",\n  \"headers\": {\n    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\": true\n  },\n  \"params\": {\n    \"inboundpartialdate\": \"2019-12-01\"\n  }\n}).then(data => {\n  console.log(data);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "then",
+      "data",
+      "console",
+      "log",
+      "catch",
+      "error"
+    ],
+    "mappings": "AAAA,MAAMA,KAAK,GAAGC,OAAO,CAAC,OAAD,CAArB;;AAEAD,KAAK,CAAC;AACF,YAAS,KADP;AAEF,SAAM,qIAFJ;AAGF,aAAU;AAEV,uBAAkB,uDAFR;AAGV,sBAAiB,oDAHP;AAIV,sBAAiB;AAJP,GAHR;AAQA,YAAS;AACX,0BAAqB;AADV;AART,CAAD,CAAL,CAYGE,IAZH,CAYSC,IAAD,IAAU;AACdC,EAAAA,OAAO,CAACC,GAAR,CAAYF,IAAZ;AACD,CAdH,EAeGG,KAfH,CAeUC,KAAD,IAAW;AAChBH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACD,CAjBH",
+    "sourcesContent": [
+      "const axios = require(\"axios\");\n\naxios({\n    \"method\":\"GET\",\n    \"url\":\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-09-01\",\n    \"headers\":{\n    \n    \"x-rapidapi-host\":\"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\":\"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\":true\n    },\"params\":{\n    \"inboundpartialdate\":\"2019-12-01\"\n    }\n    })\n  .then((data) => {\n    console.log(data);\n  })\n  .catch((error) => {\n    console.log(error);\n  });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

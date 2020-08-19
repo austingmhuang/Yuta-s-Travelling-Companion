@@ -1,0 +1,25 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nvar country = \"Dominica\";\naxios().then(function (response) {\n  console.log(response);\n})[\"catch\"](function (error) {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "then",
+      "response",
+      "console",
+      "log",
+      "error"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,IAAMC,OAAO,GAAG,UAAhB;AAIAD,KAAK,GACAE,IADL,CACU,UAACC,QAAD,EAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAHL,WAIW,UAACG,KAAD,EAAW;AACdF,EAAAA,OAAO,CAACC,GAAR,CAAYC,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Dominica\"\n\n\n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

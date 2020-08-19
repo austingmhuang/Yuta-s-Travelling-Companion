@@ -1,0 +1,30 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nconst country = \"Dominica\";\n\nconst fetchCountryData = async () => {\n  try {\n    const data = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\");\n  } catch (err) {\n    console.error(err);\n  }\n};\n\naxios().then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "fetchCountryData",
+      "data",
+      "get",
+      "err",
+      "console",
+      "error",
+      "then",
+      "response",
+      "log",
+      "catch"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,MAAMC,OAAO,GAAG,UAAhB;;AAEA,MAAMC,gBAAgB,GAAG,YAAY;AACjC,MAAI;AACA,UAAMC,IAAI,GAAG,MAAMH,KAAK,CAACI,GAAN,CAAU,0GAAV,CAAnB;AACH,GAFD,CAEE,OAAOC,GAAP,EAAY;AACVC,IAAAA,OAAO,CAACC,KAAR,CAAcF,GAAd;AACH;AACJ,CAND;;AAQAL,KAAK,GACAQ,IADL,CACWC,QAAD,IAAc;AAChBH,EAAAA,OAAO,CAACI,GAAR,CAAYD,QAAZ;AACH,CAHL,EAIKE,KAJL,CAIYJ,KAAD,IAAW;AACdD,EAAAA,OAAO,CAACI,GAAR,CAAYH,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Dominica\"\n\nconst fetchCountryData = async () => {\n    try {\n        const data = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", )\n    } catch (err) {\n        console.error(err);\n    }\n}\n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

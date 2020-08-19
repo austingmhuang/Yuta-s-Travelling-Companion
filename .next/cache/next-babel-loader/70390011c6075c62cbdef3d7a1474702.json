@@ -1,0 +1,32 @@
+{
+  "ast": null,
+  "code": "const axios = require(\"axios\");\n\naxios({\n  method: \"GET\",\n  url: \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n  headers: {\n    \"content-type\": \"application/json\",\n    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n    useQueryString: true\n  },\n  params: {\n    country: \"UK\"\n  }\n}).then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "method",
+      "url",
+      "headers",
+      "useQueryString",
+      "params",
+      "country",
+      "then",
+      "response",
+      "console",
+      "log",
+      "catch",
+      "error"
+    ],
+    "mappings": "AAAA,MAAMA,KAAK,GAAGC,OAAO,CAAC,OAAD,CAArB;;AAEAD,KAAK,CAAC;AACFE,EAAAA,MAAM,EAAE,KADN;AAEFC,EAAAA,GAAG,EACD,0GAHA;AAIFC,EAAAA,OAAO,EAAE;AACP,oBAAgB,kBADT;AAEP,uBAAmB,uDAFZ;AAGP,sBAAkB,oDAHX;AAIPC,IAAAA,cAAc,EAAE;AAJT,GAJP;AAUFC,EAAAA,MAAM,EAAE;AACNC,IAAAA,OAAO,EAAE;AADH;AAVN,CAAD,CAAL,CAcKC,IAdL,CAcWC,QAAD,IAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAhBL,EAiBKG,KAjBL,CAiBYC,KAAD,IAAW;AACdH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACH,CAnBL",
+    "sourcesContent": [
+      "const axios = require(\"axios\");\n\naxios({\n    method: \"GET\",\n    url:\n      \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n    headers: {\n      \"content-type\": \"application/json\",\n      \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n      \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n      useQueryString: true,\n    },\n    params: {\n      country: \"UK\",\n    },\n  })\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

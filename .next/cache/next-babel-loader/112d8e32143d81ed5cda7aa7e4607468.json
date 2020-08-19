@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "const axios = require(\"axios\");\n\naxios({\n  method: \"GET\",\n  url: \"https://hotels4.p.rapidapi.com/locations/search\",\n  headers: {\n    // \"content-type\": \"application/octet-stream\",\n    \"x-rapidapi-host\": \"hotels4.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n    useQueryString: true\n  },\n  params: {\n    locale: \"en_US\",\n    query: \"new york\"\n  }\n}).then(data => {}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "method",
+      "url",
+      "headers",
+      "useQueryString",
+      "params",
+      "locale",
+      "query",
+      "then",
+      "data",
+      "catch",
+      "error",
+      "console",
+      "log"
+    ],
+    "mappings": "AAAA,MAAMA,KAAK,GAAGC,OAAO,CAAC,OAAD,CAArB;;AACAD,KAAK,CAAC;AACJE,EAAAA,MAAM,EAAE,KADJ;AAEJC,EAAAA,GAAG,EAAE,iDAFD;AAGJC,EAAAA,OAAO,EAAE;AACP;AACA,uBAAmB,wBAFZ;AAGP,sBAAkB,oDAHX;AAIPC,IAAAA,cAAc,EAAE;AAJT,GAHL;AASJC,EAAAA,MAAM,EAAE;AACNC,IAAAA,MAAM,EAAE,OADF;AAENC,IAAAA,KAAK,EAAE;AAFD;AATJ,CAAD,CAAL,CAcGC,IAdH,CAcSC,IAAD,IAAU,CAEf,CAhBH,EAiBGC,KAjBH,CAiBUC,KAAD,IAAW;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,KAAZ;AACD,CAnBH",
+    "sourcesContent": [
+      "const axios = require(\"axios\");\naxios({\n  method: \"GET\",\n  url: \"https://hotels4.p.rapidapi.com/locations/search\",\n  headers: {\n    // \"content-type\": \"application/octet-stream\",\n    \"x-rapidapi-host\": \"hotels4.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n    useQueryString: true,\n  },\n  params: {\n    locale: \"en_US\",\n    query: \"new york\",\n  },\n})\n  .then((data) => {\n    \n  })\n  .catch((error) => {\n    console.log(error);\n  });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

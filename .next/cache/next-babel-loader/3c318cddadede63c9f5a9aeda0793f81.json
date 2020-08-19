@@ -1,0 +1,26 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nvar country = \"Japan\";\nvar URL = \"{\\n    method: \\\"GET\\\",\\n        url:\\n      \\\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\\\",\\n    headers: {\\n      \\\"content-type\\\": \\\"application/json\\\",\\n      \\\"x-rapidapi-host\\\": \\\"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\\\",\\n      \\\"x-rapidapi-key\\\": \\\"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\\\",\\n      useQueryString: true,\\n    },\\n    params: {\\n      query: \\\"Japan\\\",\\n    },\\n  }\";\naxios(URL).then(function (response) {\n  console.log(response);\n})[\"catch\"](function (error) {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "URL",
+      "then",
+      "response",
+      "console",
+      "log",
+      "error"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,IAAIC,OAAO,GAAG,OAAd;AACA,IAAMC,GAAG,keAAT;AAgBAF,KAAK,CAACE,GAAD,CAAL,CACKC,IADL,CACU,UAACC,QAAD,EAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAHL,WAIW,UAACG,KAAD,EAAW;AACdF,EAAAA,OAAO,CAACC,GAAR,CAAYC,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\nlet country = \"Japan\"\nconst URL = \n    `{\n    method: \"GET\",\n        url:\n      \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n    headers: {\n      \"content-type\": \"application/json\",\n      \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n      \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n      useQueryString: true,\n    },\n    params: {\n      query: \"Japan\",\n    },\n  }`\n\naxios(URL)\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

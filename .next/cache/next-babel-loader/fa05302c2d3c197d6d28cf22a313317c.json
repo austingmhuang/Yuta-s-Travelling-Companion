@@ -1,0 +1,28 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nconst country = \"Dominica\";\n\nconst fetchCountryData = async () => {\n  try {} catch (err) {\n    console.log();\n  }\n};\n\naxios().then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "fetchCountryData",
+      "err",
+      "console",
+      "log",
+      "then",
+      "response",
+      "catch",
+      "error"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,MAAMC,OAAO,GAAG,UAAhB;;AAEA,MAAMC,gBAAgB,GAAG,YAAY;AACjC,MAAI,CAEH,CAFD,CAEE,OAAOC,GAAP,EAAY;AACVC,IAAAA,OAAO,CAACC,GAAR;AACH;AACJ,CAND;;AAQAL,KAAK,GACAM,IADL,CACWC,QAAD,IAAc;AAChBH,EAAAA,OAAO,CAACC,GAAR,CAAYE,QAAZ;AACH,CAHL,EAIKC,KAJL,CAIYC,KAAD,IAAW;AACdL,EAAAA,OAAO,CAACC,GAAR,CAAYI,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Dominica\"\n\nconst fetchCountryData = async () => {\n    try {\n        \n    } catch (err) {\n        console.log();\n    }\n}\n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

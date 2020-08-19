@@ -1,0 +1,26 @@
+{
+  "ast": null,
+  "code": "const axios = require(\"axios\");\n\naxios({\n  \"method\": \"GET\",\n  \"url\": \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/%7Bcountry%7D/GBP/en-GB/\",\n  \"headers\": {\n    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\": true\n  },\n  \"params\": {\n    \"query\": \"Stockholm\"\n  }\n}).then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "then",
+      "response",
+      "console",
+      "log",
+      "catch",
+      "error"
+    ],
+    "mappings": "AAAA,MAAMA,KAAK,GAAGC,OAAO,CAAC,OAAD,CAArB;;AAEAD,KAAK,CAAC;AACF,YAAS,KADP;AAEF,SAAM,qHAFJ;AAGF,aAAU;AAEV,uBAAkB,uDAFR;AAGV,sBAAiB,oDAHP;AAIV,sBAAiB;AAJP,GAHR;AAQA,YAAS;AACX,aAAQ;AADG;AART,CAAD,CAAL,CAYKE,IAZL,CAYWC,QAAD,IAAY;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACD,CAdL,EAeGG,KAfH,CAeUC,KAAD,IAAW;AAChBH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACD,CAjBH",
+    "sourcesContent": [
+      "const axios = require(\"axios\");\n\naxios({\n    \"method\":\"GET\",\n    \"url\":\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/%7Bcountry%7D/GBP/en-GB/\",\n    \"headers\":{\n        \n    \"x-rapidapi-host\":\"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\":\"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\":true\n    },\"params\":{\n    \"query\":\"Stockholm\"\n    }\n    })\n    .then((response)=>{\n      console.log(response)\n    })\n  .catch((error) => {\n    console.log(error);\n  });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

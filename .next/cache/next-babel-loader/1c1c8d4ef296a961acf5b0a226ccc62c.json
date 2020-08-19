@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\naxios({\n  \"method\": \"GET\",\n  \"url\": \"https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/airline-directions\",\n  \"headers\": {\n    \"content-type\": \"application/octet-stream\",\n    \"x-rapidapi-host\": \"travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\": true\n  },\n  \"params\": {\n    \"limit\": \"100\",\n    \"airline_code\": \"SU\"\n  }\n}).then(data => {\n  console.log(data);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": ["axios", "then", "data", "console", "log", "catch", "error"],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAGAA,KAAK,CAAC;AACF,YAAS,KADP;AAEF,SAAM,yFAFJ;AAGF,aAAU;AACV,oBAAe,0BADL;AAEV,uBAAkB,2DAFR;AAGV,sBAAiB,oDAHP;AAIV,sBAAiB;AAJP,GAHR;AAQA,YAAS;AACX,aAAQ,KADG;AAEX,oBAAe;AAFJ;AART,CAAD,CAAL,CAaGC,IAbH,CAaSC,IAAD,IAAU;AACdC,EAAAA,OAAO,CAACC,GAAR,CAAYF,IAAZ;AACD,CAfH,EAgBGG,KAhBH,CAgBUC,KAAD,IAAW;AAChBH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACD,CAlBH",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\n\naxios({\n    \"method\":\"GET\",\n    \"url\":\"https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/airline-directions\",\n    \"headers\":{\n    \"content-type\":\"application/octet-stream\",\n    \"x-rapidapi-host\":\"travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\":\"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\":true\n    },\"params\":{\n    \"limit\":\"100\",\n    \"airline_code\":\"SU\"\n    }\n    })\n  .then((data) => {\n    console.log(data);\n  })\n  .catch((error) => {\n    console.log(error);\n  });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

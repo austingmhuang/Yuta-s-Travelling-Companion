@@ -1,0 +1,29 @@
+{
+  "ast": null,
+  "code": "import _regeneratorRuntime from \"@babel/runtime/regenerator\";\nimport _asyncToGenerator from \"@babel/runtime/helpers/esm/asyncToGenerator\";\n\nvar _this = this,\n    _jsxFileName = \"/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js\";\n\nimport React from \"react\";\nvar __jsx = React.createElement;\nimport Fetch from \"isomorphic-unfetch\";\n\nvar Index = function Index(props) {\n  return __jsx(\"div\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 4,\n      columnNumber: 5\n    }\n  }, props.data);\n};\n\n_c = Index;\nindex.getInitialProps = /*#__PURE__*/_asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {\n  var res, data;\n  return _regeneratorRuntime.wrap(function _callee$(_context) {\n    while (1) {\n      switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 2;\n          return fetch(\"https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/airline-directions?limit=100&airline_code=AFR\", {\n            \"method\": \"GET\",\n            \"headers\": {\n              \"x-rapidapi-host\": \"travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com\",\n              \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\"\n            }\n          });\n\n        case 2:\n          res = _context.sent;\n          _context.next = 5;\n          return res.json();\n\n        case 5:\n          data = _context.sent;\n          console.log(data);\n\n        case 7:\n        case \"end\":\n          return _context.stop();\n      }\n    }\n  }, _callee);\n}));\nexport default Index;\n\nvar _c;\n\n$RefreshReg$(_c, \"Index\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "Fetch",
+      "Index",
+      "props",
+      "data",
+      "index",
+      "getInitialProps",
+      "fetch",
+      "res",
+      "json",
+      "console",
+      "log"
+    ],
+    "mappings": ";;;;;;;;AAAA,OAAOA,KAAP,MAAkB,oBAAlB;;AAEA,IAAMC,KAAK,GAAG,SAARA,KAAQ,CAACC,KAAD;AAAA,SACV;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACKA,KAAK,CAACC,IADX,CADU;AAAA,CAAd;;KAAMF,K;AAONG,KAAK,CAACC,eAAN,yEAAwB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,iBACFC,KAAK,CAAC,oHAAD,EAAuH;AAC1I,sBAAU,KADgI;AAE1I,uBAAW;AACP,iCAAmB,2DADZ;AAEP,gCAAkB;AAFX;AAF+H,WAAvH,CADH;;AAAA;AACdC,UAAAA,GADc;AAAA;AAAA,iBAQDA,GAAG,CAACC,IAAJ,EARC;;AAAA;AAQdL,UAAAA,IARc;AAUpBM,UAAAA,OAAO,CAACC,GAAR,CAAYP,IAAZ;;AAVoB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,CAAxB;AAaA,eAAeF,KAAf",
+    "sourcesContent": [
+      "import Fetch from \"isomorphic-unfetch\";\n\nconst Index = (props) => (\n    <div>\n        {props.data}\n    </div>\n\n);\n\nindex.getInitialProps = async function () {\n    const res = await fetch(\"https://travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com/v1/airline-directions?limit=100&airline_code=AFR\", {\n        \"method\": \"GET\",\n        \"headers\": {\n            \"x-rapidapi-host\": \"travelpayouts-travelpayouts-flight-data-v1.p.rapidapi.com\",\n            \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\"\n        }\n    });\n    const data = await res.json();\n\n    console.log(data);\n}\n\nexport default Index;"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -1,0 +1,31 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\naxios({\n  method: \"GET\",\n  url: \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n  headers: {\n    \"content-type\": \"application/json\",\n    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n    useQueryString: true\n  },\n  params: {\n    query: \"\".concat(country)\n  }\n}).then(function (response) {\n  console.log(response);\n})[\"catch\"](function (error) {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "method",
+      "url",
+      "headers",
+      "useQueryString",
+      "params",
+      "query",
+      "country",
+      "then",
+      "response",
+      "console",
+      "log",
+      "error"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEAA,KAAK,CAAC;AACJC,EAAAA,MAAM,EAAE,KADJ;AAEJC,EAAAA,GAAG,EACD,0GAHE;AAIJC,EAAAA,OAAO,EAAE;AACP,oBAAgB,kBADT;AAEP,uBAAmB,uDAFZ;AAGP,sBAAkB,oDAHX;AAIPC,IAAAA,cAAc,EAAE;AAJT,GAJL;AAUJC,EAAAA,MAAM,EAAE;AACNC,IAAAA,KAAK,YAAKC,OAAL;AADC;AAVJ,CAAD,CAAL,CAcKC,IAdL,CAcU,UAACC,QAAD,EAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAhBL,WAiBW,UAACG,KAAD,EAAW;AACdF,EAAAA,OAAO,CAACC,GAAR,CAAYC,KAAZ;AACH,CAnBL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\naxios({\n  method: \"GET\",\n  url:\n    \"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\",\n  headers: {\n    \"content-type\": \"application/json\",\n    \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n    useQueryString: true,\n  },\n  params: {\n    query: `${country}`,\n  },\n})\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

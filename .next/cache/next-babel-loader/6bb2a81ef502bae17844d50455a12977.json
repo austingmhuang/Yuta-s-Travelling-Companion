@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nvar URL = axios().then(function (response) {\n  console.log(response);\n})[\"catch\"](_c = function _c(error) {\n  console.log(error);\n});\n_c2 = URL;\n\nvar _c, _c2;\n\n$RefreshReg$(_c, \"URL$axios()\\n    .then((response) => {\\n        console.log(response)\\n    })\\n    .catch\");\n$RefreshReg$(_c2, \"URL\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": ["axios", "URL", "then", "response", "console", "log", "error"],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AACA,IAAMC,GAAG,GAETD,KAAK,GACAE,IADL,CACU,UAACC,QAAD,EAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAHL,gBAIW,YAACG,KAAD,EAAW;AACdF,EAAAA,OAAO,CAACC,GAAR,CAAYC,KAAZ;AACH,CANL,CAFA;MAAML,G",
+    "sourcesContent": [
+      "import axios from \"axios\";\nconst URL = \n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

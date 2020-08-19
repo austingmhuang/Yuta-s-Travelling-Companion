@@ -1,0 +1,27 @@
+{
+  "ast": null,
+  "code": "import _regeneratorRuntime from \"@babel/runtime/regenerator\";\nimport _asyncToGenerator from \"@babel/runtime/helpers/esm/asyncToGenerator\";\nimport axios from \"axios\";\nvar country = \"Dominica\";\n\nvar fetchCountryData = /*#__PURE__*/function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee() {\n    return _regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            try {} catch (err) {\n              console.error(err);\n            }\n\n          case 1:\n          case \"end\":\n            return _context.stop();\n        }\n      }\n    }, _callee);\n  }));\n\n  return function fetchCountryData() {\n    return _ref.apply(this, arguments);\n  };\n}();\n\naxios().then(function (response) {\n  console.log(response);\n})[\"catch\"](function (error) {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "fetchCountryData",
+      "err",
+      "console",
+      "error",
+      "then",
+      "response",
+      "log"
+    ],
+    "mappings": ";;AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,IAAMC,OAAO,GAAG,UAAhB;;AAEA,IAAMC,gBAAgB;AAAA,sEAAG;AAAA;AAAA;AAAA;AAAA;AACrB,gBAAI,CAEH,CAFD,CAEE,OAAOC,GAAP,EAAY;AACVC,cAAAA,OAAO,CAACC,KAAR,CAAcF,GAAd;AACH;;AALoB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,GAAH;;AAAA,kBAAhBD,gBAAgB;AAAA;AAAA;AAAA,GAAtB;;AAQAF,KAAK,GACAM,IADL,CACU,UAACC,QAAD,EAAc;AAChBH,EAAAA,OAAO,CAACI,GAAR,CAAYD,QAAZ;AACH,CAHL,WAIW,UAACF,KAAD,EAAW;AACdD,EAAAA,OAAO,CAACI,GAAR,CAAYH,KAAZ;AACH,CANL",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Dominica\"\n\nconst fetchCountryData = async () => {\n    try {\n        \n    } catch (err) {\n        console.error(err);\n    }\n}\n\naxios()\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

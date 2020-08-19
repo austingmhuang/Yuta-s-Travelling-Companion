@@ -1,0 +1,26 @@
+{
+  "ast": null,
+  "code": "const axios = require(\"axios\");\n\naxios({\n  \"method\": \"GET\",\n  \"url\": \"https://qtravel-qtravel.p.rapidapi.com/apis\",\n  \"headers\": {\n    \"content-type\": \"application/octet-stream\",\n    \"x-rapidapi-host\": \"qtravel-qtravel.p.rapidapi.com\",\n    \"x-rapidapi-key\": \"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\": true\n  },\n  \"params\": {\n    \"query\": \"jungle aqua park\",\n    \"qapikey\": \"125371768e33eb299b923ed3ca28e71c\"\n  }\n}).then(response => {\n  console.log(response);\n}).catch(error => {\n  console.log(error);\n});",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "require",
+      "then",
+      "response",
+      "console",
+      "log",
+      "catch",
+      "error"
+    ],
+    "mappings": "AAAA,MAAMA,KAAK,GAAGC,OAAO,CAAC,OAAD,CAArB;;AAEAD,KAAK,CAAC;AACF,YAAS,KADP;AAEF,SAAM,6CAFJ;AAGF,aAAU;AACV,oBAAe,0BADL;AAEV,uBAAkB,gCAFR;AAGV,sBAAiB,oDAHP;AAIV,sBAAiB;AAJP,GAHR;AAQA,YAAS;AACX,aAAQ,kBADG;AAEX,eAAU;AAFC;AART,CAAD,CAAL,CAaKE,IAbL,CAaWC,QAAD,IAAc;AAChBC,EAAAA,OAAO,CAACC,GAAR,CAAYF,QAAZ;AACH,CAfL,EAgBKG,KAhBL,CAgBYC,KAAD,IAAW;AACdH,EAAAA,OAAO,CAACC,GAAR,CAAYE,KAAZ;AACH,CAlBL",
+    "sourcesContent": [
+      "const axios = require(\"axios\");\n\naxios({\n    \"method\":\"GET\",\n    \"url\":\"https://qtravel-qtravel.p.rapidapi.com/apis\",\n    \"headers\":{\n    \"content-type\":\"application/octet-stream\",\n    \"x-rapidapi-host\":\"qtravel-qtravel.p.rapidapi.com\",\n    \"x-rapidapi-key\":\"c573d899fbmsh7f790eccbfa07a7p17edf7jsnf6b3cf11be53\",\n    \"useQueryString\":true\n    },\"params\":{\n    \"query\":\"jungle aqua park\",\n    \"qapikey\":\"125371768e33eb299b923ed3ca28e71c\"\n    }\n    })\n    .then((response) => {\n        console.log(response)\n    })\n    .catch((error) => {\n        console.log(error);\n    });"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "script"
+}

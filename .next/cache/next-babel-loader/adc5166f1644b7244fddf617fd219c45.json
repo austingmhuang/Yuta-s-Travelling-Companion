@@ -1,0 +1,33 @@
+{
+  "ast": null,
+  "code": "import axios from \"axios\";\nconst country = \"Japan\";\n\nconst fetchLocationData = async () => {\n  try {\n    const {\n      data\n    } = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n      headers: {\n        \"content-type\": \"application/json\",\n        \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n        \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n        useQueryString: true\n      },\n      params: {\n        query: `${country}`\n      }\n    });\n    console.log(data);\n    data.map(location => {});\n  } catch (err) {\n    console.error(err);\n  }\n};\n\nfetchLocationData();",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Index.js"
+    ],
+    "names": [
+      "axios",
+      "country",
+      "fetchLocationData",
+      "data",
+      "get",
+      "headers",
+      "useQueryString",
+      "params",
+      "query",
+      "console",
+      "log",
+      "map",
+      "location",
+      "err",
+      "error"
+    ],
+    "mappings": "AAAA,OAAOA,KAAP,MAAkB,OAAlB;AAEA,MAAMC,OAAO,GAAG,OAAhB;;AAEA,MAAMC,iBAAiB,GAAG,YAAY;AAClC,MAAI;AACA,UAAM;AAACC,MAAAA;AAAD,QAAS,MAAMH,KAAK,CAACI,GAAN,CAAU,0GAAV,EAAsH;AACvIC,MAAAA,OAAO,EAAE;AACL,wBAAgB,kBADX;AAEL,2BAAmB,uDAFd;AAGL,0BAAkB,oDAHb;AAILC,QAAAA,cAAc,EAAE;AAJX,OAD8H;AAOvIC,MAAAA,MAAM,EAAE;AACJC,QAAAA,KAAK,EAAG,GAAEP,OAAQ;AADd;AAP+H,KAAtH,CAArB;AAYAQ,IAAAA,OAAO,CAACC,GAAR,CAAYP,IAAZ;AACAA,IAAAA,IAAI,CAACQ,GAAL,CAAUC,QAAD,IAAc,CAEtB,CAFD;AAIH,GAlBD,CAkBE,OAAOC,GAAP,EAAY;AACVJ,IAAAA,OAAO,CAACK,KAAR,CAAcD,GAAd;AACH;AACJ,CAtBD;;AAwBAX,iBAAiB",
+    "sourcesContent": [
+      "import axios from \"axios\";\n\nconst country = \"Japan\"\n\nconst fetchLocationData = async () => {\n    try {\n        const {data} = await axios.get(\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/UK/GBP/en-GB/\", {\n            headers: {\n                \"content-type\": \"application/json\",\n                \"x-rapidapi-host\": \"skyscanner-skyscanner-flight-search-v1.p.rapidapi.com\",\n                \"x-rapidapi-key\": \"f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75\",\n                useQueryString: true,\n                    },\n            params: {\n                query: `${country}`,\n            },\n        })\n\n        console.log(data);\n        data.map((location) => {\n            \n        })\n\n    } catch (err) {\n        console.error(err);\n    }\n}\n\nfetchLocationData();"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}
