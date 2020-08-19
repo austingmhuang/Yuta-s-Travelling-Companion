@@ -1,15 +1,16 @@
 const axios = require("axios");
-// import React from "react";
+require("dotenv").config();
 
-// const Hotels = (props) => {
-const getDestinationIds = async locationString => {
+const apiKey = process.env.PROJECT_API_KEY;
+
+export const getDestinationIds = async locationString => {
   try {
     let res = await axios({
       method: "GET",
       url: "https://hotels4.p.rapidapi.com/locations/search",
       headers: {
         "x-rapidapi-host": "hotels4.p.rapidapi.com",
-        "x-rapidapi-key": "f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75",
+        "x-rapidapi-key": apiKey,
         useQueryString: true
       },
       params: {
@@ -21,14 +22,18 @@ const getDestinationIds = async locationString => {
     // get an array of objects (suggestions) of which each represents a hotel chain
     // each hotel chain has a property named entities (hotels) that has a destinationId which is used for getPropertiesList
     let data = res.data.suggestions;
-    console.log(data);
-    return data;
+    // also contains lat/long if needed
+    let hotelGroups = data.map(hotelGroup => hotelGroup.entities);
+    let flattened = hotelGroups.flat();
+    let hotelIds = flattened.map(hotel => hotel.destinationId);
+    // console.log(data);
+    return hotelIds;
   } catch (error) {
     console.log(error);
   }
 };
 
-const getPropertiesList = async (
+export const getPropertiesList = async (
   destId,
   checkInDate,
   checkOutDate,
@@ -40,7 +45,7 @@ const getPropertiesList = async (
       url: "https://hotels4.p.rapidapi.com/properties/list",
       headers: {
         "x-rapidapi-host": "hotels4.p.rapidapi.com",
-        "x-rapidapi-key": "f3b72532e5mshf3212aa087d7ef8p170d42jsnb3b9bd882b75",
+        "x-rapidapi-key": apiKey,
         useQueryString: true
       },
       params: {
@@ -66,16 +71,5 @@ const getPropertiesList = async (
   }
 };
 
-// fill with values from props?
-getDestinationIds("new york");
-getPropertiesList("1506246", "2020-01-08", "2020-01-15", "1");
-
-/*    return (
-    <div>
-      <h1>Hotels in {props.location} </h1>
-      <p>Currently available hotels</p>
-    </div>
-  );
-}; */
-
-// export default Hotels;
+// getDestinationIds("new york");
+// getPropertiesList("1506246", "2020-01-08", "2020-01-15", "1");
