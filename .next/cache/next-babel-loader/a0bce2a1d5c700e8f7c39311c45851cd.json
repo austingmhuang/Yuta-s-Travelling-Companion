@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Flights.js\";\nimport React from \"react\";\nvar __jsx = React.createElement;\nimport { fetchPlacesData } from \"./index\";\n\nfunction Flights() {\n  return __jsx(\"div\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 4,\n      columnNumber: 10\n    }\n  }, fetchPlacesData);\n}\n\nexport default Flights;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/ethancr0wn/Google Drive/CodeChrysalis/PROJECTS/travelling-rapid-api/pages/api/flights/Flights.js"
+    ],
+    "names": ["fetchPlacesData", "Flights"],
+    "mappings": ";;;AAAA,SAASA,eAAT,QAAgC,SAAhC;;AAEA,SAASC,OAAT,GAAmB;AACjB,SAAO;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KAAMD,eAAN,CAAP;AACD;;AAED,eAAeC,OAAf",
+    "sourcesContent": [
+      "import { fetchPlacesData } from \"./index\";\n\nfunction Flights() {\n  return <div>{fetchPlacesData}</div>;\n}\n\nexport default Flights;\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

@@ -16,7 +16,7 @@ export const fetchPlacesData = async () => {
           "content-type": "application/json",
           "x-rapidapi-host":
             "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-          "x-rapidapi-key": `${process.env.REACT_APP_PlacesDataKey}`,
+          "x-rapidapi-key": process.env.REACT_APP_PlacesDataKey,
           useQueryString: true
         },
         params: {
@@ -42,7 +42,7 @@ export const fetchRoutesAndQuotesData = async () => {
           "content-type": "application/json",
           "x-rapidapi-host":
             "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-          "x-rapidapi-key": `${process.env.REACT_APP_RoutesDataKey}`,
+          "x-rapidapi-key": process.env.REACT_APP_RoutesDataKey,
           useQueryString: true
         }
       }
