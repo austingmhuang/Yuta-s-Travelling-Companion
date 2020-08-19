@@ -1,0 +1,15 @@
+.Topbar {
+  background-color: #4ea8de;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#LoginButton {
+  height: 50px;
+  width: 100px;
+}
+
+#TopbarLogo {
+  height: 60px;
+}
