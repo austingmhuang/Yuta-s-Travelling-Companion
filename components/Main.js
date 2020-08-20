@@ -3,6 +3,7 @@ import Button from "./SendButton";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
+import Weather from "./Weather";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
