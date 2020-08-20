@@ -7,38 +7,40 @@ import styles from "../styles/Main.module.css";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
-  const [fromTextInput, setFromTextInput] = useState("");
-  const [toTextInput, setToTextInput] = useState("");
-  const [timeTextInput, setTimeTextInput] = useState("");
+  const [fromTextInput, setFromTextInput] = useState(undefined);
+  const [toTextInput, setToTextInput] = useState(undefined);
+  const [timeTextInput, setTimeTextInput] = useState(undefined);
 
-  const sendInputInfoAndChangeView = props => {
-    const goToTripView = current => {
-      if (current === "PlaneView") {
+  const makeTextInputsArray = () => {
+    const textInputsArray = [];
+    textInputsArray[0] = fromTextInput;
+    textInputsArray[1] = toTextInput;
+    textInputsArray[2] = timeTextInput;
+    console.log(textInputsArray);
+    return textInputsArray;
+  };
+
+  const goToTripView = (function() {
+    let executed = false;
+    return function() {
+      if (!executed) {
+        executed = true;
         setView("TripView");
-      } else {
-        setView("PlaneView");
       }
     };
+  })();
 
-    const makeTextInputsArray = () => {
-      const textInputsArray = [];
-      textInputsArray[0] = fromTextInput;
-      textInputsArray[1] = toTextInput;
-      textInputsArray[2] = timeTextInput;
-      console.log(textInputsArray);
-      return textInputsArray;
-    };
-
-    goToTripView(props);
+  const sendInputInfoAndChangeView = () => {
+    goToTripView();
     makeTextInputsArray();
   };
 
   return (
     <>
       {user ? (
-        <h1>Where are you flying, {user.name}😊</h1>
+        <h2 className={styles.greeting}>Where are you flying, {user.name}😊</h2>
       ) : (
-        <h1>Please login!</h1>
+        <h2 className={styles.greeting}>Please login!</h2>
       )}
       <WhereTo
         setFromTextInput={setFromTextInput}

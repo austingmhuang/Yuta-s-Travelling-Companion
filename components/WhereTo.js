@@ -7,18 +7,15 @@ const WhereTo = props => {
   return (
     <div className={styles.inlineBox}>
       <FromTextAndInputField
-        text="Leaving from"
-        placeholder="🛫"
+        placeholder={<i class="fas fa-plane-departure"> Leaving from</i>}
         setFromTextInput={props.setFromTextInput}
       />
       <ToTextAndInputField
-        text="Flying to"
-        placeholder="🛬"
+        placeholder={<i class="fas fa-plane-arrival"> Going to</i>}
         setToTextInput={props.setToTextInput}
       />
       <TimeTextAndInputField
-        text="Date"
-        placeholder="🛬"
+        placeholder={<i class="fas fa-clock"> Date</i>}
         setTimeTextInput={props.setTimeTextInput}
       />
     </div>

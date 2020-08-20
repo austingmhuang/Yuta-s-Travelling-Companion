@@ -1,6 +1,4 @@
-import Weather from "./Weather";
 import styles from "../styles/Topbar.module.css";
-import Link from "next/link";
 
 const Topbar = ({ user, loading = false }) => {
   return (
@@ -10,7 +8,6 @@ const Topbar = ({ user, loading = false }) => {
         src="images/profile.jpg"
         alt="logo image"
       ></img>
-      <Weather />
       {!loading &&
         (user ? (
           <>
