@@ -1,8 +1,8 @@
-This was created during my time as a student at Code Chrysalis.
+This was created during our time at Code Chrysalis.
 
 ## Name
 
-Travelling app
+Yuta's Travelling Companion
 
 ## Description
 
@@ -15,7 +15,12 @@ plan out their trips.
 
 ## Getting Started
 
-First, run the development server:
+First run:
+```
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -24,6 +29,7 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or just head to https://travelling-rapid-api.vercel.app/ 
 
 ## Support
 
