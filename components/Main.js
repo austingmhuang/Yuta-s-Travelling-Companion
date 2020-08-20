@@ -8,7 +8,7 @@ import styles from "../styles/Main.module.css";
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
   //way to access user's location user['https://example.com/geoip'].country_code);
-  console.log(user["https://example.com/geoip"].country_code);
+  //console.log(user["https://example.com/geoip"].country_name);
 
   const goToTripView = current => {
     if (current === "PlaneView") {
