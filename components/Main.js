@@ -6,6 +6,7 @@ import HotelDisplay from "./HotelDisplay";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
+import Weather from "./Weather";
 
 const Main = () => {
   const [view, setView] = useState("PlaneView");

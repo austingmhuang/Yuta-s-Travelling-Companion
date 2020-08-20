@@ -1,3 +1,4 @@
+import Weather from "./Weather";
 import styles from "../styles/Topbar.module.css";
 
 const Topbar = () => {
@@ -8,6 +9,7 @@ const Topbar = () => {
         src="images/profile.jpg"
         alt="logo image"
       ></img>
+      <Weather />
       <button id={styles.LoginButton}>
         <img src="images/log.png" alt="login" />
       </button>
