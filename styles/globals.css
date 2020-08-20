@@ -29,3 +29,7 @@ a:hover {
 div {
   display: block;
 }
+
+/* @media (max-width: 670px) {
+  width: 100%;
+} */
