@@ -1,0 +1,11 @@
+.footer {
+  background-color: #d0d1ff;
+  padding: 1rem;
+  width: 100%;
+}
+
+#footerLogo {
+  height: 50px;
+
+  margin: 0 auto;
+}
