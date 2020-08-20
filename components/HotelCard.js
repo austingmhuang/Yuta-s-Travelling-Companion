@@ -1,6 +1,7 @@
 import styles from "../styles/HotelCard.module.css";
 
 const HotelCard = props => {
+  console.log("props in card", props);
   return (
     <div className={styles.card}>
       <img
