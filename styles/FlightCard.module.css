@@ -1,0 +1,19 @@
+.FlightCard {
+  background-color: white;
+  height: 400px;
+  width: 1500px;
+}
+
+.flightInformation {
+  background-color: #8fd8ffb3;
+  padding: 1px;
+  padding-left: 10px;
+}
+
+.airlineAndAirport {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

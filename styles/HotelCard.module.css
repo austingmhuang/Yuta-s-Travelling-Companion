@@ -1,0 +1,11 @@
+.card {
+  background-color: white;
+  padding: 20px;
+  height: 400px;
+  width: 300px;
+}
+
+.hotelName {
+  margin-top: 25px;
+  border-top: 1px solid black;
+}
