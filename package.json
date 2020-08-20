@@ -1,8 +1,9 @@
 {
   "name": "travelling-rapid-api",
   "version": "0.1.0",
+  "private": "true",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start"
   },
@@ -15,6 +16,7 @@
     }
   },
   "dependencies": {
+    "@auth0/nextjs-auth0": "^0.6.0",
     "axios": "^0.19.2",
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
@@ -42,6 +44,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-prettier": "^3.1.0",
     "husky": "^4.2.3",
+    "nodemon": "^2.0.4",
     "prettier": "^1.19.1",
     "pretty-quick": "^1.5.0"
   }
