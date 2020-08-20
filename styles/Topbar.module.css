@@ -1,0 +1,12 @@
+.Topbar {
+  background-color: #d0d1ff;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#TopbarLogo {
+  height: 60px;
+}
