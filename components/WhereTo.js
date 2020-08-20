@@ -4,12 +4,9 @@ import styles from "../styles/WhereTo.module.css";
 const WhereTo = () => {
   return (
     <div className={styles.inlineBox}>
-      <TextAndInputField
-        text="Leaving from"
-        placeholder="introduce your destination"
-      />
-      <TextAndInputField text="Flying to" placeholder="introduce your origin" />
-      <TextAndInputField text="Date" placeholder="introduce your time" />
+      <TextAndInputField text="Leaving from" placeholder="🛫" />
+      <TextAndInputField text="Flying to" placeholder="🛬" />
+      <TextAndInputField text="Date" placeholder="⏱" />
     </div>
   );
 };

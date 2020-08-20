@@ -3,7 +3,7 @@ import Button from "./SendButton";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
-import Weather from "./Weather";
+import styles from "../styles/Main.module.css";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
@@ -21,14 +21,14 @@ const Main = ({ user }) => {
   return (
     <>
       {user ? (
-        <p>
-          Where are you flying, {user.name}🤣 {user.last_ip}
-        </p>
+        <p>Where are you flying, {user.name}🤣</p>
       ) : (
         <h1>Please login!</h1>
       )}
       <WhereTo />
-      <Button text="Trip Me!" view={view} func={goToTripView} />
+      <div className={styles.tripButton}>
+        <Button text="Trip Me!" view={view} func={goToTripView} />
+      </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
   );
