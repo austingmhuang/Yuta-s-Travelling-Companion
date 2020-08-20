@@ -7,6 +7,8 @@ import Weather from "./Weather";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
+  //way to access user's location user['https://example.com/geoip'].country_code);
+  console.log(user["https://example.com/geoip"].country_code);
 
   const goToTripView = current => {
     if (current === "PlaneView") {
@@ -19,7 +21,9 @@ const Main = ({ user }) => {
   return (
     <>
       {user ? (
-        <p>Where are you flying, {user.name}🤣</p>
+        <p>
+          Where are you flying, {user.name}🤣 {user.last_ip}
+        </p>
       ) : (
         <h1>Please login!</h1>
       )}
