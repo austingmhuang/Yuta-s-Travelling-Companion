@@ -1,9 +1,9 @@
-import React from "react";
+import styles from "../styles/PlaneView.module.css";
 
 const PlaneView = () => {
   return (
     <div>
-      <h1>This is a PlaneView!!</h1>
+      <img src="/images/top.jpg" className={styles.img}></img>
     </div>
   );
 };
