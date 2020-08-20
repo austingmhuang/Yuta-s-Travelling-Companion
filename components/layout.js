@@ -1,81 +1,35 @@
-import Link from "next/link";
+import Head from "next/head";
+import Header from "./header";
 
-function Header({ user, loading }) {
+function Layout({ user, loading = false, children }) {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          {!loading &&
-            (user ? (
-              <>
-                <li>
-                  <Link href="/profile">
-                    <a>Client-rendered profile</a>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/advanced/ssr-profile">
-                    <a>Server rendered profile (advanced)</a>
-                  </Link>
-                </li>
-                <li>
-                  <a href="/api/logout">Logout</a>
-                </li>
-              </>
-            ) : (
-              <li>
-                <a href="/api/login">Login</a>
-              </li>
-            ))}
-        </ul>
-      </nav>
+    <>
+      <Head>
+        <title>Next.js with Auth0</title>
+      </Head>
+
+      <Header user={user} loading={loading} />
+
+      <main>
+        <div className="container">{children}</div>
+      </main>
 
       <style jsx>{`
-        header {
-          padding: 0.2rem;
-          color: #fff;
-          background-color: #333;
-        }
-        nav {
+        .container {
           max-width: 42rem;
           margin: 1.5rem auto;
         }
-        ul {
-          display: flex;
-          list-style: none;
-          margin-left: 0;
-          padding-left: 0;
-        }
-        li {
-          margin-right: 1rem;
-        }
-        li:nth-child(2) {
-          margin-right: auto;
-        }
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
-        button {
-          font-size: 1rem;
-          color: #fff;
-          cursor: pointer;
-          border: none;
-          background: none;
+      `}</style>
+      <style jsx global>{`
+        body {
+          margin: 0;
+          color: #333;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
         }
       `}</style>
-    </header>
+    </>
   );
 }
 
-export default Header;
+export default Layout;
