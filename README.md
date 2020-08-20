@@ -1,12 +1,21 @@
+This was created during my time as a student at Code Chrysalis.
+
+## Name
+
+Travelling app
+
+## Description
+
+An app that users can come to checkout the latest hotel and plane fare prices.
+The app allows users to save their favorite hotels, airlines, and routes to
+plan out their trips.
+
+<img width="1388" alt="Screen Shot 2020-08-20 at 10 22 49" src="https://user-images.githubusercontent.com/65219445/90706176-9094cd00-e2cf-11ea-9403-f392c5ead3bc.png">
+
+
 ## Getting Started
 
-First, run:
-
-```
-Yarn
-```
-
-Then, run the development server:
+First, run the development server:
 
 ```bash
 npm run dev
