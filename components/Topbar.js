@@ -8,9 +8,9 @@ const Topbar = () => {
         src="images/profile.jpg"
         alt="logo image"
       ></img>
-      <button id={styles.LoginButton}>
-        <img src="images/log.png" alt="login" />
-      </button>
+      <a href="#">
+        Login <i class="fas fa-sign-in-alt" className={styles.login}></i>
+      </a>
     </div>
   );
 };

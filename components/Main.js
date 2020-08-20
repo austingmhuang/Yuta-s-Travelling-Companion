@@ -1,8 +1,6 @@
 import WhereTo from "./WhereTo";
 import styles from "../styles/Main.module.css";
 import Button from "./SendButton";
-import FlightDisplay from "./FlightDisplay";
-import HotelDisplay from "./HotelDisplay";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
@@ -27,8 +25,6 @@ const Main = () => {
         view={view}
         func={goToTripView}
       />
-      <FlightDisplay />
-      <HotelDisplay />
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
   );

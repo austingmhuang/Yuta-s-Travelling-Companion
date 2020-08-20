@@ -1,8 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This was created during our time at Code Chrysalis.
+
+## Name
+
+Yuta's Travelling Companion
+
+## Description
+
+An app that users can come to checkout the latest hotel and plane fare prices.
+The app allows users to save their favorite hotels, airlines, and routes to
+plan out their trips.
+
+<img width="1388" alt="Screen Shot 2020-08-20 at 10 22 49" src="https://user-images.githubusercontent.com/65219445/90706176-9094cd00-e2cf-11ea-9403-f392c5ead3bc.png">
+
 
 ## Getting Started
 
-First, run the development server:
+First run:
+```
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -11,20 +29,21 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or just head to https://travelling-rapid-api.vercel.app/ 
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Support
 
-## Learn More
+We are still working on improving the app, further development is in our plans.
+You can check out [Travelling app @ GitHub repository](https://github.com/austingmhuang/travelling-rapid-api) - your feedback and contributions are welcome!
 
-To learn more about Next.js, take a look at the following resources:
+## Our team
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[Austin Huang](https://github.com/austingmhuang)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[Florian Fejer](https://github.com/Ryukyo)
 
-## Deploy on Vercel
+[Yuta Nomoto](https://github.com/namitry)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[Eduardo Ruiz](https://github.com/eduru)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Minierparedes Jesus](https://github.com/minierparedes)
