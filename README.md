@@ -12,10 +12,10 @@ plan out their trips.
 
 <img width="1388" alt="Screen Shot 2020-08-20 at 10 22 49" src="https://user-images.githubusercontent.com/65219445/90706176-9094cd00-e2cf-11ea-9403-f392c5ead3bc.png">
 
-
 ## Getting Started
 
 First run:
+
 ```
 yarn
 ```
@@ -29,7 +29,7 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-Or just head to https://travelling-rapid-api.vercel.app/ 
+Or just head to https://travelling-rapid-api.vercel.app/
 
 ## Support
 
