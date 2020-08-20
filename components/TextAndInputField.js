@@ -1,4 +1,4 @@
-import styles from "../styles/TextAndInputField.module.css";
+import styles from "../styles/textAndInputField.module.css";
 import Text from "./Text";
 
 const TextAndInputField = props => {
