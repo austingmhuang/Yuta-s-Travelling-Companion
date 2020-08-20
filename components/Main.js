@@ -1,12 +1,14 @@
 import WhereTo from "./WhereTo";
-import styles from "../styles/Main.module.css";
 import Button from "./SendButton";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
+import styles from "../styles/Main.module.css";
 
-const Main = () => {
+const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
+  //way to access user's location user['https://example.com/geoip'].country_code);
+  //console.log(user["https://example.com/geoip"].country_name);
 
   const goToTripView = current => {
     if (current === "PlaneView") {
@@ -18,13 +20,15 @@ const Main = () => {
 
   return (
     <>
+      {user ? (
+        <p>Where are you flying, {user.name}🤣</p>
+      ) : (
+        <h1>Please login!</h1>
+      )}
       <WhereTo />
-      <Button
-        text="Trip Me!"
-        className={styles.tripButton}
-        view={view}
-        func={goToTripView}
-      />
+      <div className={styles.tripButton}>
+        <Button text="Trip Me!" view={view} func={goToTripView} />
+      </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
   );
