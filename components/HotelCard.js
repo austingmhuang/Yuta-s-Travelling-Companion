@@ -1,18 +1,18 @@
 import styles from "../styles/HotelCard.module.css";
 
-const HotelCard = () => {
+const HotelCard = props => {
   return (
     <div className={styles.card}>
       <img
         id={styles.hotelImg}
-        src="images/profile.jpg"
+        src={props.imgUrl}
         alt="logo image"
         className={styles.img}
       ></img>
-      <h3 className={styles.hotelName}>Hotel Name</h3>
-      <p>Rating: </p>
-      <p>Address: </p>
-      <p>Price: </p>
+      <h3 className={styles.hotelName}>{props.hotelName}</h3>
+      <p>Rating: {props.hotelRating} </p>
+      <p>Address: {props.hotelAddress} </p>
+      <p>Price: {props.hotelRating} </p>
     </div>
   );
 };
