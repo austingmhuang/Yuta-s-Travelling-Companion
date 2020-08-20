@@ -26,6 +26,7 @@ const SendButton = props => {
       onClick={() => props.func(props.view)}
     >
       {props.text}
+      <input type="text"></input>
     </Button>
   );
 };
