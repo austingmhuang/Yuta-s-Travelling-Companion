@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
+import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
@@ -13,7 +13,7 @@ export default function Home() {
       <Topbar />
       <Layout home user={user} loading={loading}>
         <Head>
-          <title>{siteTitle}</title>
+          <title>CC13 Trip App</title>
         </Head>
         <Main />
       </Layout>
