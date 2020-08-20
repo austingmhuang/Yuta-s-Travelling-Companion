@@ -30,7 +30,11 @@ You can check out [Travelling app @ GitHub repository](https://github.com/austin
 Check out our team:
 
 [Austin Huang](https://github.com/austingmhuang)
+
 [Florian Fejer](https://github.com/Ryukyo)
+
 [Yuta Nomoto](https://github.com/namitry)
+
 [Eduardo Ruiz](https://github.com/eduru)
+
 [Minierparedes Jesus](https://github.com/minierparedes)
