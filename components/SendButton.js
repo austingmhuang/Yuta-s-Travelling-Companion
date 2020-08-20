@@ -8,11 +8,11 @@ const useStyles = makeStyles(() =>
       color: "#94DFDA",
       fontWeight: 800,
       marginBottom: "8px",
+      textAlign: "center",
       "&:hover": {
         backgroundColor: "#94DFDA",
         color: "#fff"
-      },
-      textAlign: "center"
+      }
     }
   })
 );
