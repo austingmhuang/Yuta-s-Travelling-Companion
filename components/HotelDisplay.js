@@ -4,8 +4,30 @@ import Spinner from "./Spinner";
 import styles from "../styles/HotelDisplay.module.css";
 
 const HotelDisplay = () => {
-  let [hotels, setHotels] = useState([]);
-  let [loading, setLoading] = useState(true);
+  let [hotels, setHotels] = useState([
+    // {
+    //   name: "loading",
+    //   starRating: "loading",
+    //   address: "loading",
+    //   ratePlan: { price: "loading" },
+    //   thumbnailUrl: "loading",
+    // },
+    // {
+    //   name: "loading",
+    //   starRating: "loading",
+    //   address: "loading",
+    //   ratePlan: { price: "loading" },
+    //   thumbnailUrl: "loading",
+    // },
+    // {
+    //   name: "loading",
+    //   starRating: "loading",
+    //   address: "loading",
+    //   ratePlan: { price: "loading" },
+    //   thumbnailUrl: "loading",
+    // },
+  ]);
+  const [loading, setLoading] = useState(true);
   console.log("hotels in hotel display", hotels);
   const getDestinationIds = async location => {
     try {
@@ -36,10 +58,10 @@ const HotelDisplay = () => {
       try {
         // setLoading(true);
         const res = await fetch(
-          `http://localhost:3000/api/hotels/results?destId=${destinationIds}&checkInDate=${checkInDate}&checkOutDate=${checkOutDate}`
+          `/api/hotels/results?destId=${destinationIds}&checkInDate=${checkInDate}&checkOutDate=${checkOutDate}`
         );
-        hotels = await res.json();
-        hotels = hotels.properties;
+        const jsonData = await res.json();
+        setHotels(jsonData);
         console.log(hotels);
         // return hotels;
       } catch (error) {
@@ -48,7 +70,7 @@ const HotelDisplay = () => {
       }
     };
     getHotels("45", "2020-01-08", "2020-01-15");
-  }, [setHotels]);
+  }, []);
 
   /* useEffect(() => {
     const getHotels = async (destinationIds, checkInDate, checkOutDate) => {
@@ -63,9 +85,9 @@ const HotelDisplay = () => {
   }, [setHotels]); */
 
   // getHotels("45", "2020-01-08", "2020-01-15"); // WIP just show the first 3 items of hotels fetch result
-  /* useEffect(() => {
+  useEffect(() => {
     if (hotels.length > 0) setLoading(false);
-  }, [setLoading]) */
+  }, []);
 
   return (
     <div>

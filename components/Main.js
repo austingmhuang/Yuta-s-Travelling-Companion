@@ -1,44 +1,71 @@
 import WhereTo from "./WhereTo";
-import Button from "./SendButton";
+import Button from "@material-ui/core/Button";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
 import styles from "../styles/Main.module.css";
 import Link from "next/link";
 
+const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
+  <Link href={href} as={hrefAs} prefetch>
+    <a className={className}>{children}</a>
+  </Link>
+);
+
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
-  //way to access user's location user['https://example.com/geoip'].country_code);
-  //console.log(user["https://example.com/geoip"].country_name);
+  const [fromTextInput, setFromTextInput] = useState(undefined);
+  const [toTextInput, setToTextInput] = useState(undefined);
+  const [timeTextInput, setTimeTextInput] = useState(undefined);
 
-  const goToTripView = current => {
-    if (current === "PlaneView") {
-      setView("TripView");
-    } else {
-      setView("PlaneView");
-    }
+  const makeTextInputsArray = () => {
+    const textInputsArray = [];
+    textInputsArray[0] = fromTextInput;
+    textInputsArray[1] = toTextInput;
+    textInputsArray[2] = timeTextInput;
+    console.log(textInputsArray);
+    return textInputsArray;
+  };
+
+  const goToTripView = (function() {
+    let executed = false;
+    return function() {
+      if (!executed) {
+        executed = true;
+        setView("TripView");
+      }
+    };
+  })();
+
+  const sendInputInfoAndChangeView = () => {
+    goToTripView();
+    makeTextInputsArray();
   };
 
   return (
     <>
       {user ? (
-        <p>
-          Where are you flying, {user.name}🤣 Your location:{" "}
+        <h2 className={styles.greeting}>
+          Where are you flying, {user.name}😊 Your location:{" "}
           {user["https://example.com/geoip"].country_name}
-        </p>
+        </h2>
       ) : (
-        <h1>Please login!</h1>
+        <h2 className={styles.greeting}>Please login!</h2>
       )}
-      <WhereTo />
+      <WhereTo
+        setFromTextInput={setFromTextInput}
+        setToTextInput={setToTextInput}
+        setTimeTextInput={setTimeTextInput}
+      />
       <div className={styles.tripButton}>
-        <Link href="/flight">
-          <button type="button">Trip me!</button>
-        </Link>
-        <Button text="Trip Me!" view={view} func={goToTripView} />
+        <Button variant="outlined" component={ButtonLink} href={"/flight"}>
+          Trip Me
+        </Button>
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
   );
 };
 
+//        <Button text="Trip Me!" view={view} func={goToTripView} />
 export default Main;

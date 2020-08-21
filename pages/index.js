@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
 import Main from "../components/Main";
