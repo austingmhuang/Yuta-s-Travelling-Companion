@@ -1,25 +1,20 @@
 import styles from "../styles/Topbar.module.css";
 import Link from "next/link";
 
-//      <Weather />
-
 const Topbar = ({ user, loading = false }) => {
   return (
     <div className={styles.Topbar}>
       <div className={styles.wrapper}>
-        <img
-          id={styles.TopbarLogo}
-          src="images/profile.jpg"
-          alt="logo image"
-        ></img>
+        <Link href="/">
+          <img
+            id={styles.TopbarLogo}
+            src="images/profile.jpg"
+            alt="logo image"
+          />
+        </Link>
         <li>
           <Link href="/about">
             <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/flight">
-            <a>Flights</a>
           </Link>
         </li>
         {!loading &&
