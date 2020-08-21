@@ -17,8 +17,11 @@ function HotelCard({ hotel }) {
         className={styles.img}
       ></img>
       <h3 className={styles.hotelName}>{hotel[0].name}</h3>
-      <p>Rating: {hotel[0].starRating} </p>
-      <p>Address: {hotel[0].address.streetAddress} </p>
+      <p>Rating: {hotel[0].guestReviews.rating} </p>
+      <p>
+        Address: {hotel[0].address.streetAddress}, {hotel[0].address.postalCode}{" "}
+        {hotel[0].address.locality}{" "}
+      </p>
       <p>Price: {hotel[0].ratePlan.price.current} </p>
     </div>
   );
