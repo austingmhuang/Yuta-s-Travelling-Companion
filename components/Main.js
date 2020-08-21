@@ -14,28 +14,49 @@ const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
-  //way to access user's location user['https://example.com/geoip'].country_code);
-  //console.log(user["https://example.com/geoip"].country_name);
+  const [fromTextInput, setFromTextInput] = useState(undefined);
+  const [toTextInput, setToTextInput] = useState(undefined);
+  const [timeTextInput, setTimeTextInput] = useState(undefined);
 
-  const goToTripView = current => {
-    if (current === "PlaneView") {
-      setView("TripView");
-    } else {
-      setView("PlaneView");
-    }
+  const makeTextInputsArray = () => {
+    const textInputsArray = [];
+    textInputsArray[0] = fromTextInput;
+    textInputsArray[1] = toTextInput;
+    textInputsArray[2] = timeTextInput;
+    console.log(textInputsArray);
+    return textInputsArray;
+  };
+
+  const goToTripView = (function() {
+    let executed = false;
+    return function() {
+      if (!executed) {
+        executed = true;
+        setView("TripView");
+      }
+    };
+  })();
+
+  const sendInputInfoAndChangeView = () => {
+    goToTripView();
+    makeTextInputsArray();
   };
 
   return (
     <>
       {user ? (
-        <p>
-          Where are you flying, {user.name}🤣 Your location:{" "}
+        <h2 className={styles.greeting}>
+          Where are you flying, {user.name}😊 Your location:{" "}
           {user["https://example.com/geoip"].country_name}
-        </p>
+        </h2>
       ) : (
-        <h1>Please login!</h1>
+        <h2 className={styles.greeting}>Please login!</h2>
       )}
-      <WhereTo />
+      <WhereTo
+        setFromTextInput={setFromTextInput}
+        setToTextInput={setToTextInput}
+        setTimeTextInput={setTimeTextInput}
+      />
       <div className={styles.tripButton}>
         <Button variant="outlined" component={ButtonLink} href={"/flight"}>
           Trip Me
