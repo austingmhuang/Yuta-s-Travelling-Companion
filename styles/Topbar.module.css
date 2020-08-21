@@ -1,14 +1,20 @@
 .Topbar {
-  background-color: #d0d1ff;
+  background-color: #50dfd6;
   padding: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-#LoginButton {
-  height: 50px;
-  width: 100px;
+
+.wrapper {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 #TopbarLogo {

@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: #808080;
   text-decoration: none;
 }
 
@@ -21,11 +21,15 @@ a:hover {
   text-decoration: underline;
 }
 
-img {
+/* img {
   max-width: 100%;
   display: block;
-}
+} */
 
 div {
   display: block;
 }
+
+/* @media (max-width: 670px) {
+  width: 100%;
+} */

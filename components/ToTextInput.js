@@ -10,13 +10,17 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Text = props => {
+const ToTextInput = props => {
   const classes = useStyles();
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label={props.placeholder} />
+      <TextField
+        id="standard-basic"
+        label={props.placeholder}
+        onChange={e => props.setToTextInput(event.target.value)}
+      />
     </form>
   );
 };
 
-export default Text;
+export default ToTextInput;
