@@ -4,6 +4,7 @@ import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
 import styles from "../styles/Main.module.css";
+import Link from "next/link";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
@@ -30,6 +31,9 @@ const Main = ({ user }) => {
       )}
       <WhereTo />
       <div className={styles.tripButton}>
+        <Link href="/flight">
+          <button type="button">Trip me!</button>
+        </Link>
         <Button text="Trip Me!" view={view} func={goToTripView} />
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
