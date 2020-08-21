@@ -7,7 +7,7 @@ import { useFetchUser } from "../lib/user";
 function FlightCard({ flight }) {
   return (
     <>
-     <h1>{flight.Places[0].Name}</h1>
+     <h4>Leaving from: {flight.Places[0].Name} Going to: {flight.Places[1].Name}</h4>
       <div>
         <h4>Airline: {flight.Carriers[0].Name}</h4>
         <h3>Departure date: </h3>
