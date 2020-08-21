@@ -52,6 +52,7 @@ const Main = ({ user }) => {
         setTimeTextInput={setTimeTextInput}
       />
       <div className={styles.tripButton}>
+        <Button text="Trip Me!" view={view} func={sendInputInfoAndChangeView} />
         <Link href="/flight">
           <Button
             text="Trip Me!"
@@ -59,7 +60,6 @@ const Main = ({ user }) => {
             onclick="/flight"
           />
         </Link>
-        <button type="button">Trip me!</button>
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
