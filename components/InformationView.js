@@ -7,7 +7,7 @@ const InformationView = () => {
     <div>
       <Weather />
       <FlightDisplay />
-      <HotelDisplay />
+      {/* <HotelDisplay /> */}
     </div>
   );
 };
