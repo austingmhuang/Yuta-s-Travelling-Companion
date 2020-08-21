@@ -8,6 +8,13 @@ import styles from "../styles/FlightCard.module.css";
 import Topbar from "../components/Topbar";
 import FlightCard from "../components/FlightCard";
 import FlightCards from "../components/FlightCards";
+import Button from "@material-ui/core/Button";
+
+const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
+  <Link href={href} as={hrefAs} prefetch>
+    <a className={className}>{children}</a>
+  </Link>
+);
 
 // function FlightCard({ flight }) {
 //   return (
@@ -39,10 +46,10 @@ function Flight() {
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        {loadingFlight ? <>Loading...</> : <FlightCards flight={flight} />}
-        <Link href="/hotel">
-          <button type="button">What hotels?</button>
-        </Link>
+        {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
+        <Button variant="outlined" component={ButtonLink} href={"/hotel"}>
+          Hotels
+        </Button>
       </Layout>
     </>
   );
