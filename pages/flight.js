@@ -46,7 +46,7 @@ function Flight() {
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
+        {loadingFlight ? <>Loading...</> : <FlightCards flight={flight} />}
         <Button variant="outlined" component={ButtonLink} href={"/hotel"}>
           Hotels
         </Button>
