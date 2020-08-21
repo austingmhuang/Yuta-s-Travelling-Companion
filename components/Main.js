@@ -5,6 +5,23 @@ import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
 import styles from "../styles/Main.module.css";
 import Link from "next/link";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    button: {
+      borderColor: "#94DFDA",
+      color: "#94DFDA",
+      fontWeight: 800,
+      marginBottom: "8px",
+      textAlign: "center",
+      "&:hover": {
+        backgroundColor: "#94DFDA",
+        color: "#fff"
+      }
+    }
+  })
+);
 
 const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
   <Link href={href} as={hrefAs} prefetch>
@@ -42,6 +59,8 @@ const Main = ({ user }) => {
     makeTextInputsArray();
   };
 
+  const classes = useStyles();
+
   return (
     <>
       {user ? (
@@ -58,7 +77,12 @@ const Main = ({ user }) => {
         setTimeTextInput={setTimeTextInput}
       />
       <div className={styles.tripButton}>
-        <Button variant="outlined" component={ButtonLink} href={"/flight"}>
+        <Button
+          variant="outlined"
+          component={ButtonLink}
+          href={"/flight"}
+          className={classes.button}
+        >
           Trip Me
         </Button>
       </div>

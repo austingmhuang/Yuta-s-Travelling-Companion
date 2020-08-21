@@ -5,10 +5,28 @@ import Layout from "../components/Layout";
 import { useFetchUser } from "../lib/user";
 import Link from "next/link";
 import styles from "../styles/FlightCard.module.css";
+import mainStyles from "../styles/Main.module.css";
 import Topbar from "../components/Topbar";
 import FlightCard from "../components/FlightCard";
 import FlightCards from "../components/FlightCards";
+import { makeStyles, createStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+
+const useStyles = makeStyles(() =>
+  createStyles({
+    button: {
+      borderColor: "#94DFDA",
+      color: "#94DFDA",
+      fontWeight: 800,
+      marginBottom: "8px",
+      textAlign: "center",
+      "&:hover": {
+        backgroundColor: "#94DFDA",
+        color: "#fff"
+      }
+    }
+  })
+);
 
 const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
   <Link href={href} as={hrefAs} prefetch>
@@ -65,15 +83,23 @@ const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
 function Flight() {
   const { flight, loadingFlight } = useFetchFlight();
   const { user, loading } = useFetchUser();
+  const classes = useStyles();
 
   return (
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
-        <Button variant="outlined" component={ButtonLink} href={"/hotel"}>
-          Hotels
-        </Button>
+        {loadingFlight ? <>Loading...</> : <FlightCards flight={flight} />}
+        <div className={mainStyles.tripButton}>
+          <Button
+            variant="outlined"
+            component={ButtonLink}
+            href={"/hotel"}
+            className={classes.button}
+          >
+            Hotels
+          </Button>
+        </div>
       </Layout>
     </>
   );

@@ -1,6 +1,6 @@
 .Topbar {
   background-color: #50dfd6;
-  padding: 2rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,4 +19,5 @@
 
 #TopbarLogo {
   height: 60px;
+  margin-right: auto;
 }

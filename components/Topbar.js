@@ -12,11 +12,14 @@ const Topbar = ({ user, loading = false }) => {
             alt="logo image"
           />
         </Link>
-        <li>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </li>
+        <Link href="/about">
+          {/* <i class="fas fa-address-card" className={styles.login}>About&nbsp;&nbsp;&nbsp;</i>
+           */}
+          <a>
+            <i class="fas fa-address-card" className={styles.login}></i>
+            About&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </a>
+        </Link>
         {!loading &&
           (user ? (
             <>
