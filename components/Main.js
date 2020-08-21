@@ -4,6 +4,7 @@ import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
 import styles from "../styles/Main.module.css";
+import Link from "next/link";
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
@@ -51,7 +52,14 @@ const Main = ({ user }) => {
         setTimeTextInput={setTimeTextInput}
       />
       <div className={styles.tripButton}>
-        <Button text="Trip Me!" view={view} func={sendInputInfoAndChangeView} />
+        <Link href="/flight">
+          <Button
+            text="Trip Me!"
+            func={sendInputInfoAndChangeView}
+            onclick="/flight"
+          />
+        </Link>
+        <button type="button">Trip me!</button>
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>

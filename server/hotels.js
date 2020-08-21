@@ -33,12 +33,7 @@ export const getDestinationIds = async locationString => {
   }
 };
 
-export const getPropertiesList = async (
-  destId,
-  checkInDate,
-  checkOutDate,
-  persons
-) => {
+export const getPropertiesList = async (destId, checkInDate, checkOutDate) => {
   try {
     let res = await axios({
       method: "GET",
@@ -56,8 +51,8 @@ export const getPropertiesList = async (
         pageNumber: "1",
         checkIn: checkInDate, //"2020-01-08"
         checkOut: checkOutDate, //"2020-01-15"
-        pageSize: "25",
-        adults1: persons // "1"
+        pageSize: "3",
+        adults1: "1" // "1"
       }
     });
 
