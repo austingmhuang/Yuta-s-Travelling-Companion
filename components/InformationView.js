@@ -5,7 +5,7 @@ const InformationView = () => {
   return (
     <div>
       <FlightDisplay />
-      <HotelDisplay />
+      {/* <HotelDisplay /> */}
     </div>
   );
 };
