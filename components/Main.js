@@ -1,10 +1,16 @@
 import WhereTo from "./WhereTo";
-import Button from "./SendButton";
+import Button from "@material-ui/core/Button";
 import { useState } from "react";
 import PlaneView from "./PlaneView";
 import InformationView from "./InformationView";
 import styles from "../styles/Main.module.css";
 import Link from "next/link";
+
+const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
+  <Link href={href} as={hrefAs} prefetch>
+    <a className={className}>{children}</a>
+  </Link>
+);
 
 const Main = ({ user }) => {
   const [view, setView] = useState("PlaneView");
@@ -31,9 +37,9 @@ const Main = ({ user }) => {
       )}
       <WhereTo />
       <div className={styles.tripButton}>
-        <Link href="/flight">
-          <button type="button">Trip me!</button>
-        </Link>
+        <Button variant="outlined" component={ButtonLink} href={"/flight"}>
+          Trip Me
+        </Button>
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>

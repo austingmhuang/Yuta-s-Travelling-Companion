@@ -10,7 +10,6 @@ function About() {
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        <h1>Hi {user.name}!</h1>
         <p>Made by Austin, Yuta, Jesus, Florian and Eduardo</p>
       </Layout>
       <Footer />
