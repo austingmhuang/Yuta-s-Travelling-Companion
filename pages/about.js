@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import { useFetchUser } from "../lib/user";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";
+import TeamMembers from "../components/TeamMembers";
 
 function About() {
   const { user, loading } = useFetchUser();
@@ -10,8 +11,8 @@ function About() {
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        <h1>Hi {user.name}!</h1>
-        <p>Made by Austin, Yuta, Jesus, Florian and Eduardo</p>
+        <h2>Made with ❤️ by </h2>
+        <TeamMembers />
       </Layout>
       <Footer />
     </>
