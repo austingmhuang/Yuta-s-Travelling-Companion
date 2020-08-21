@@ -33,21 +33,19 @@ function FlightCard4(props) {
             Leaving from
           </Typography>
           <Typography variant="body1" color="textSecondary" component="h7">
-            {props.flight.Places[0].Name}
+            {props.flight.Places[1].Name}
           </Typography>
           <Typography gutterBottom variant="h6" component="h3">
             Going to
           </Typography>
           <Typography variant="body1" color="textSecondary" component="h7">
-            {props.flight.Places[1].Name}
+            {props.flight.Places[0].Name}
           </Typography>
           <Typography gutterBottom variant="h6" component="h3">
             Departure date
           </Typography>
           <Typography variant="body1" color="textSecondary" component="h7">
-            {props.flight.Quotes[0].QuoteDateTime}
-            {props.flight.Places[0].IataCode} -{" "}
-            {props.flight.Places[1].IataCode}
+            2020-08-21 T11:55:00SFO-JFK
           </Typography>
           <Typography gutterBottom variant="h6" component="h3">
             Cheapest price USD

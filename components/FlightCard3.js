@@ -45,15 +45,13 @@ function FlightCard3(props) {
             Departure date
           </Typography>
           <Typography variant="body1" color="textSecondary" component="h7">
-            {props.flight.Quotes[0].QuoteDateTime}
-            {props.flight.Places[0].IataCode} -{" "}
-            {props.flight.Places[1].IataCode}
+            2020-08-21 T10:55:00JFK-SFO
           </Typography>
           <Typography gutterBottom variant="h6" component="h3">
             Cheapest price USD
           </Typography>
           <Typography variant="h6" color="textSecondary" component="h7">
-            $250
+            $255
           </Typography>
         </CardContent>
       </CardActionArea>
