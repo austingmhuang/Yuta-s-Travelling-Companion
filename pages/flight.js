@@ -7,6 +7,12 @@ import Link from "next/link";
 import styles from "../styles/FlightCard.module.css";
 import Topbar from "../components/Topbar";
 
+const ButtonLink = ({ className, href, hrefAs, children, prefetch }) => (
+  <Link href={href} as={hrefAs} prefetch>
+    <a className={className}>{children}</a>
+  </Link>
+);
+
 function FlightCard({ flight }) {
   return (
     <>
@@ -38,9 +44,9 @@ function Flight() {
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
         {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
-        <Link href="/hotel">
-          <button type="button">What hotels?</button>
-        </Link>
+        <Button variant="outlined" component={ButtonLink} href={"/hotel"}>
+          Trip Me
+        </Button>
       </Layout>
     </>
   );

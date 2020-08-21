@@ -11,7 +11,6 @@ function About() {
     <>
       <Topbar user={user} loading={loading} />
       <Layout user={user} loading={loading}>
-        {/* <h1>Hi {user.name}!</h1> */}
         <h2>Made with ❤️ by </h2>
         <TeamMembers />
       </Layout>

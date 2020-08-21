@@ -3,6 +3,11 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1250px;
-  padding: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
   text-align: center;
+}
+
+.text {
+  color: red;
 }

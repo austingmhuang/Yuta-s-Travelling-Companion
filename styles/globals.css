@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  color: #6b2025;
+  color: #808080;
   text-decoration: none;
 }
 
@@ -29,3 +29,7 @@ a:hover {
 div {
   display: block;
 }
+
+/* @media (max-width: 670px) {
+  width: 100%;
+} */
