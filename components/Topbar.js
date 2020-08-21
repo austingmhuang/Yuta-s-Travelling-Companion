@@ -2,6 +2,8 @@ import Weather from "./Weather";
 import styles from "../styles/Topbar.module.css";
 import Link from "next/link";
 
+//      <Weather />
+
 const Topbar = ({ user, loading = false }) => {
   return (
     <div className={styles.Topbar}>
@@ -10,7 +12,6 @@ const Topbar = ({ user, loading = false }) => {
         src="images/profile.jpg"
         alt="logo image"
       ></img>
-      <Weather />
       <li>
         <Link href="/about">
           <a>About</a>

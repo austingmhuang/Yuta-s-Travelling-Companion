@@ -34,11 +34,11 @@ const Main = ({ user }) => {
         <Link href="/flight">
           <button type="button">Trip me!</button>
         </Link>
-        <Button text="Trip Me!" view={view} func={goToTripView} />
       </div>
       {view === "PlaneView" ? <PlaneView /> : <InformationView />}
     </>
   );
 };
 
+//        <Button text="Trip Me!" view={view} func={goToTripView} />
 export default Main;

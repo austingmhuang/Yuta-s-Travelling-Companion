@@ -5,9 +5,11 @@ import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 import styles from "../styles/HotelCard.module.css";
 import Spinner from "../components/Spinner";
+import Topbar from "../components/Topbar";
 
 function HotelCard({ hotel }) {
   console.log("hotel in page", hotel);
+
   return (
     <div className={styles.card}>
       <img
@@ -30,13 +32,16 @@ function Hotel() {
   const { hotel, loadingHotel } = useFetchHotel();
   const { user, loading } = useFetchUser();
   return (
-    <Layout user={user} loading={loading}>
-      {loadingHotel ? (
-        <Spinner />
-      ) : (
-        <HotelCard hotel={hotel.data.body.searchResults.results} />
-      )}
-    </Layout>
+    <>
+      <Topbar user={user} loading={loading} />
+      <Layout user={user} loading={loading}>
+        {loadingHotel ? (
+          <Spinner />
+        ) : (
+          <HotelCard hotel={hotel.data.body.searchResults.results} />
+        )}
+      </Layout>
+    </>
   );
 }
 export default Hotel;
