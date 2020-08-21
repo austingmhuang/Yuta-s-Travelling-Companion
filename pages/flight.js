@@ -45,7 +45,7 @@ function Flight() {
       <Layout user={user} loading={loading}>
         {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
         <Button variant="outlined" component={ButtonLink} href={"/hotel"}>
-          Trip Me
+          Hotels
         </Button>
       </Layout>
     </>
