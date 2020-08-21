@@ -5,7 +5,6 @@ import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 
 function FlightCard({ flight }) {
-  console.log(flight.Places[0]);
   return (
     <>
      <h1>{flight.Places[0].Name}</h1>
