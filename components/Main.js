@@ -38,7 +38,10 @@ const Main = ({ user }) => {
   return (
     <>
       {user ? (
-        <h2 className={styles.greeting}>Where are you flying, {user.name}😊</h2>
+        <h2 className={styles.greeting}>
+          Where are you flying, {user.name}😊 Your location:{" "}
+          {user["https://example.com/geoip"].country_name}
+        </h2>
       ) : (
         <h2 className={styles.greeting}>Please login!</h2>
       )}

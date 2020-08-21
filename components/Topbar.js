@@ -1,4 +1,5 @@
 import styles from "../styles/Topbar.module.css";
+import Link from "next/link";
 
 const Topbar = ({ user, loading = false }) => {
   return (
@@ -9,13 +10,25 @@ const Topbar = ({ user, loading = false }) => {
           src="images/profile.jpg"
           alt="logo image"
         ></img>
+        <li>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/flight">
+            <a>Flights</a>
+          </Link>
+        </li>
         {!loading &&
           (user ? (
             <>
-              <a href="/api/logout">
-                Logout{" "}
-                <i class="fas fa-sign-out-alt" className={styles.login}></i>
-              </a>
+              <li>
+                <a href="/api/logout">
+                  Logout{" "}
+                  <i class="fas fa-sign-out-alt" className={styles.login}></i>
+                </a>
+              </li>
             </>
           ) : (
             <a href="/api/login">
