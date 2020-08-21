@@ -38,8 +38,9 @@ const Main = ({ user }) => {
   return (
     <>
       {user ? (
+ yuta
         <h2 className={styles.greeting}>Where are you flying, {user.name}😊</h2>
-      ) : (
+   ) : (
         <h2 className={styles.greeting}>Please login!</h2>
       )}
       <WhereTo
