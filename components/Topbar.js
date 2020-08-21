@@ -1,8 +1,6 @@
 import styles from "../styles/Topbar.module.css";
 import Link from "next/link";
 
-//      <Weather />
-
 const Topbar = ({ user, loading = false }) => {
   return (
     <div className={styles.Topbar}>

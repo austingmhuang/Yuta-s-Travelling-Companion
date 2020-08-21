@@ -2,9 +2,6 @@
   margin: 0 auto;
   margin-top: 100px;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
-  background-color: #ced4da;
   width: 1250px;
-  padding: 1rem;
 }

@@ -67,5 +67,4 @@ const Main = ({ user }) => {
   );
 };
 
-//        <Button text="Trip Me!" view={view} func={goToTripView} />
 export default Main;
