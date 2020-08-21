@@ -1,7 +1,7 @@
 // This import is only needed when checking authentication status directly from getInitialProps
 // import auth0 from '../lib/auth0'
 import { useFetchFlight } from "../lib/flight";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 import Link from "next/link";
 import styles from "../styles/FlightCard.module.css";

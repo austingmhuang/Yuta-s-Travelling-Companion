@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 import Topbar from "../components/Topbar";
 import Footer from "../components/Footer";

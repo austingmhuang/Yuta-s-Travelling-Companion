@@ -1,7 +1,7 @@
 // This import is only needed when checking authentication status directly from getInitialProps
 // import auth0 from '../lib/auth0'
 import { useFetchHotel } from "../lib/hotels";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 import styles from "../styles/HotelCard.module.css";
 import Spinner from "../components/Spinner";
