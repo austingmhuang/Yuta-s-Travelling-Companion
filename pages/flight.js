@@ -5,15 +5,15 @@ import Layout from "../components/layout";
 import { useFetchUser } from "../lib/user";
 
 function FlightCard({ flight }) {
-  console.log(flight.Places[0]);
   return (
     <>
-      <h1>Profile</h1>
-
+     <h1>{flight.Places[0].Name}</h1>
       <div>
-        <h3>Profile (client rendered)</h3>
-        <p>PlaceId: {flight.Places[0].PlaceId}</p>
-        <p>PlaceName: {flight.Places[0].PlaceName}</p>
+        <h4>Airline: {flight.Carriers[0].Name}</h4>
+        <h3>Departure date: </h3>
+        <p>{flight.Quotes[0].QuoteDateTime}</p>
+        <p>{flight.Places[0].IataCode} - {flight.Places[1].IataCode}</p>
+        <h5>Cheapest price USD: $ {flight.Quotes[0].MinPrice}</h5>
       </div>
     </>
   );
