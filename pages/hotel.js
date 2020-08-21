@@ -1,13 +1,15 @@
 // This import is only needed when checking authentication status directly from getInitialProps
 // import auth0 from '../lib/auth0'
 import { useFetchHotel } from "../lib/hotels";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import { useFetchUser } from "../lib/user";
 import styles from "../styles/HotelCard.module.css";
 import Spinner from "../components/Spinner";
+import Topbar from "../components/Topbar";
 
 function HotelCard({ hotel }) {
   console.log("hotel in page", hotel);
+
   return (
     <>
       <div className={styles.card}>
@@ -66,13 +68,16 @@ function Hotel() {
   const { hotel, loadingHotel } = useFetchHotel();
   const { user, loading } = useFetchUser();
   return (
-    <Layout user={user} loading={loading}>
-      {loadingHotel ? (
-        <Spinner />
-      ) : (
-        <HotelCard hotel={hotel.data.body.searchResults.results} />
-      )}
-    </Layout>
+    <>
+      <Topbar user={user} loading={loading} />
+      <Layout user={user} loading={loading}>
+        {loadingHotel ? (
+          <Spinner />
+        ) : (
+          <HotelCard hotel={hotel.data.body.searchResults.results} />
+        )}
+      </Layout>
+    </>
   );
 }
 export default Hotel;
