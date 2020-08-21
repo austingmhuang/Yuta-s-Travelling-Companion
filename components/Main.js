@@ -21,7 +21,10 @@ const Main = ({ user }) => {
   return (
     <>
       {user ? (
-        <p>Where are you flying, {user.name}🤣</p>
+        <p>
+          Where are you flying, {user.name}🤣 Your location:{" "}
+          {user["https://example.com/geoip"].country_name}
+        </p>
       ) : (
         <h1>Please login!</h1>
       )}
