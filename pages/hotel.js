@@ -15,7 +15,7 @@ function HotelCard({ hotel }) {
       <div className={styles.card}>
         <img
           id={styles.hotelImg}
-          src="https://exp.cdn-hotels.com/hotels/20000000/19800000/19794400/19794327/b02255b8_l.jpg"
+          src="https://exp.cdn-hotels.com/hotels/43000000/42290000/42287800/42287796/1c671a3f_l.jpg"
           alt="logo image"
           className={styles.img}
         ></img>
@@ -32,7 +32,7 @@ function HotelCard({ hotel }) {
       <div className={styles.card}>
         <img
           id={styles.hotelImg}
-          src="https://exp.cdn-hotels.com/hotels/16000000/15700000/15691900/15691811/518377e8_l.jpg"
+          src="https://exp.cdn-hotels.com/hotels/8000000/7810000/7807600/7807544/8e06e435_l.jpg"
           alt="logo image"
           className={styles.img}
         ></img>
@@ -48,7 +48,7 @@ function HotelCard({ hotel }) {
       <div className={styles.card}>
         <img
           id={styles.hotelImg}
-          src="https://exp.cdn-hotels.com/hotels/3000000/2910000/2906500/2906474/10b8d62a_l.jpg"
+          src="https://exp.cdn-hotels.com/hotels/24000000/23690000/23688300/23688269/363a1b82_l.jpg"
           alt="logo image"
           className={styles.img}
         ></img>
@@ -60,6 +60,23 @@ function HotelCard({ hotel }) {
           {hotel[2].address.locality}
         </p>
         <p>Price: {hotel[2].ratePlan.price.current} </p>
+      </div>
+
+      <div className={styles.card}>
+        <img
+          id={styles.hotelImg}
+          src="https://exp.cdn-hotels.com/hotels/20000000/19120000/19117200/19117122/928b0413_l.jpg"
+          alt="logo image"
+          className={styles.img}
+        ></img>
+        <h3 className={styles.hotelName}>{hotel[3].name}</h3>
+        <p>Rating: {hotel[3].guestReviews.rating} </p>
+        <p>
+          Address: {hotel[3].address.streetAddress},{" "}
+          {hotel[3].address.postalCode}
+          {hotel[3].address.locality}
+        </p>
+        <p>Price: {hotel[3].ratePlan.price.current} </p>
       </div>
     </>
   );
