@@ -1,0 +1,12 @@
+.TeamMembers {
+  padding: 2rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.member {
+  height: 200px;
+  border-radius: 50%;
+}
