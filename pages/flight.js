@@ -31,8 +31,8 @@ function Flight() {
   return (
     <Layout user={user} loading={loading}>
       {loadingFlight ? <>Loading...</> : <FlightCard flight={flight} />}
-      <Link href="/flight">
-        <button type="button">Trip me!</button>
+      <Link href="/hotel">
+        <button type="button">What hotels?</button>
       </Link>
     </Layout>
   );
