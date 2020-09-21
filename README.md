@@ -1,4 +1,6 @@
-This was created during our time at Code Chrysalis.
+## Project Description
+
+An app that users can come to checkout the latest hotel and plane fare prices.　This was created during our time at Code Chrysalis.
 
 ## Name
 
